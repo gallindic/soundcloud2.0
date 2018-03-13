@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 # Najini gemi
 gem 'devise'
+gem 'sprockets-rails', :require => 'sprockets/railtie'  #Sprockets-rails
+gem 'bootstrap', '~> 4.0.0' #Bootstrap css framework
 
 
 

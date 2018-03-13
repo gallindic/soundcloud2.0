@@ -7,8 +7,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  
+<% if user_signed_in? %>
+  <%= render 'layouts/navUser' %>
+<% else %>
+  <%= render 'layouts/navGuest' %>
+<% end %>
 
-<%= yield %>
+<div class="container mt-4">
+  <%= yield %>
+</div>
 
 </body>
 </html>

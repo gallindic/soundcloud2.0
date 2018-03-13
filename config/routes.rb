@@ -6,7 +6,16 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
   
+  #Nardi route za music controller
+  resources :musics
+  
+  #Root page
   root 'pages#index'
+  
+  #Ustvarjeni routei
+  get '/profile' => 'pages#profile'
+  get '/index' => 'pages#index'
+  get '/settings' => 'pages#settings'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
