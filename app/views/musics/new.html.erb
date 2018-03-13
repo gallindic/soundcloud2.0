@@ -1,0 +1,22 @@
+<h1>Upload a music file</h1>
+
+<%= form_for @music do |m| %>
+
+  <div class="form-group">
+    <%= m.label :title %><br />
+    <%= m.text_field :title, autofocus: true, class: 'form-control' %>
+  </div>
+  
+  <div class="form-group">
+    <%= m.label :description %><br />
+    <%= m.text_field :description, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= m.file_field :file, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= m.submit "Upload", class: 'btn btn-primary' %>
+  </div>
+<% end %>
