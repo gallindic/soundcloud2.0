@@ -1,1 +1,18 @@
 <h1>Index</h1>
+<% for @m in @music %>
+    <div class="box">
+        <p>Title: <%= @m.title %></p>
+        <p>Descripton:<%= @m.description %></p>
+        <p>Views: <%= @m.views %></p>
+        <audio src="<%= @m.file.url() %>" type="audio/mpeg" controls>
+            Your browser does not support the audio element.
+        </audio>
+        <% if @m.image.present? %>
+            <%= image_tag @m.image_url.to_s, class: "medium-size" %>
+        <% else %>
+            <img src="music_note.jpg" class="medium-size" />
+        <% end %>
+        <%= link_to "Delete", @m, :data => {:confirm => 'Are you sure?'}, :method => 'delete' %>
+    </div>
+    <br/><br/>
+<% end %>

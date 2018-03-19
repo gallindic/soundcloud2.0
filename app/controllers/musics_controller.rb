@@ -7,7 +7,7 @@ class MusicsController < ApplicationController
     end
     
     def create
-        @music = Music.create(params[:music].permit(:title, :description, :file))
+        @music = Music.create(params[:music].permit(:title, :description, :file, :image))
         @music.views = 0
         
         if @music.save
@@ -24,5 +24,8 @@ class MusicsController < ApplicationController
     end
     
     def destroy
+        @music = Music.find(params[:id])
+        @music.destroy
+        redirect_to index_path, :notice => "Your list has been deleted"
     end
 end
