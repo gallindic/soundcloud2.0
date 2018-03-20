@@ -1,5 +1,6 @@
 class MusicsController < ApplicationController
     def show
+        @music = Music.find(params[:id])
     end
     
     def new
@@ -7,7 +8,7 @@ class MusicsController < ApplicationController
     end
     
     def create
-        @music = Music.create(params[:music].permit(:title, :description, :file, :image))
+        @music = Music.create(params[:music].permit(:title, :description, :file, :image, :genre_id))
         @music.views = 0
         
         if @music.save

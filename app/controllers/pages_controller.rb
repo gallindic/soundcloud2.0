@@ -8,4 +8,7 @@ class PagesController < ApplicationController
     
     def settings
     end
+    
+    def explore
+    end
 end

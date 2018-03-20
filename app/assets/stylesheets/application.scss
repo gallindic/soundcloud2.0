@@ -14,13 +14,24 @@
 
  @import "bootstrap";
  
- .box{
-     
-     padding: 2em;
-     width: 40%;
-     background-color: #d3d3d3;
+  *{
+  box-sizing: border-box;
  }
  
- .medium-size{
-  width: 50%;
+ .box{
+     margin: .5em 2.5%;
+     width: 45%;
+ }
+ 
+ .music-img{
+  width: 20%;
+ }
+ 
+.music-info{
+ width: 80%;
+ padding: 0 1em;
+}
+ 
+ .music-cover{
+  width: 100%;
  }

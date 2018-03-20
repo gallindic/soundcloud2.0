@@ -1,18 +1,19 @@
-<h1>Index</h1>
 <% for @m in @music %>
-    <div class="box">
-        <p>Title: <%= @m.title %></p>
-        <p>Descripton:<%= @m.description %></p>
-        <p>Views: <%= @m.views %></p>
-        <audio src="<%= @m.file.url() %>" type="audio/mpeg" controls>
-            Your browser does not support the audio element.
-        </audio>
-        <% if @m.image.present? %>
-            <%= image_tag @m.image_url.to_s, class: "medium-size" %>
-        <% else %>
-            <img src="music_note.jpg" class="medium-size" />
-        <% end %>
-        <%= link_to "Delete", @m, :data => {:confirm => 'Are you sure?'}, :method => 'delete' %>
+    <div class="card box float-left">
+        <div class="card-body">
+            <div class="float-left music-img">
+                <% if @m.image.present? %>
+                    <%= image_tag @m.image_url.to_s, class: "music-cover" %>
+                <% else %>
+                    <img src="music_note.jpg" class="music-cover" />
+                <% end %>
+            </div>
+            <div class="float-right music-info">
+                <div class="card-block">
+                    <p>Title: <%= link_to @m.title, music_path(@m.id) %><span class="float-right"><%= @m.created_at.strftime("%d-%m-%Y") %></span></p>
+                    <p>Description: <%= @m.description %></p>
+                </div>
+            </div>    
+        </div>
     </div>
-    <br/><br/>
 <% end %>
