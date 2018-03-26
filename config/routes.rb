@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   root 'pages#index'
   
   #Ustvarjeni routei
-  get '/profile' => 'pages#profile'
+  get '/profile/:id' => 'pages#profile', as: :profile
   get '/index' => 'pages#index'
   get '/settings' => 'pages#settings'
   get '/explore' => 'pages#explore'

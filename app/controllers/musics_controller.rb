@@ -10,6 +10,7 @@ class MusicsController < ApplicationController
     def create
         @music = Music.create(params[:music].permit(:title, :description, :file, :image, :genre_id))
         @music.views = 0
+        @music.user_id = current_user.id
         
         if @music.save
           redirect_to index_path, :notice => "A new list has been successfully created"  

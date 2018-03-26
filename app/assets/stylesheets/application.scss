@@ -18,9 +18,12 @@
   box-sizing: border-box;
  }
  
+  .remove-dropdown-arrow::after{
+    display:none;
+ }
+ 
  .box{
      margin: .5em 2.5%;
-     width: 45%;
  }
  
  .music-img{

@@ -1,19 +1,25 @@
-<% for @m in @music %>
-    <div class="card box float-left">
-        <div class="card-body">
-            <div class="float-left music-img">
-                <% if @m.image.present? %>
-                    <%= image_tag @m.image_url.to_s, class: "music-cover" %>
-                <% else %>
-                    <img src="music_note.jpg" class="music-cover" />
-                <% end %>
-            </div>
-            <div class="float-right music-info">
-                <div class="card-block">
-                    <p>Title: <%= link_to @m.title, music_path(@m.id) %><span class="float-right"><%= @m.created_at.strftime("%d-%m-%Y") %></span></p>
-                    <p>Description: <%= @m.description %></p>
+<div class="row">
+    <div class="col-3"></div>
+    <div class="col-6">
+      <% for @m in @music %>
+        <div class="card box float-left">
+            <div class="card-body">
+                <div class="float-left music-img">
+                    <% if @m.image.present? %>
+                        <%= image_tag @m.image_url.to_s, class: "music-cover" %>
+                    <% else %>
+                        <img src="music_note.jpg" class="music-cover" />
+                    <% end %>
                 </div>
-            </div>    
+                <div class="float-right music-info">
+                    <div class="card-block">
+                        <p>Title: <%= link_to @m.title, music_path(@m.id) %><span class="float-right"><%= @m.created_at.strftime("%d-%m-%Y") %></span></p>
+                        <p>Description: <%= @m.description %></p>
+                    </div>
+                </div>    
+            </div>
         </div>
+    <% end %>  
     </div>
-<% end %>
+    <div class="col-3"></div>
+</div>
