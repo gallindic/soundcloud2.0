@@ -6,6 +6,7 @@ gem 'sprockets-rails', :require => 'sprockets/railtie'  #Sprockets-rails
 gem 'bootstrap', '~> 4.0.0' #Bootstrap css framework
 gem 'carrierwave', '~> 1.0' #Gem za file upload
 gem "font-awesome-rails"  #Font-Awesome icons
+gem 'acts_as_votable'  #Acts as votable gem
 
 
 

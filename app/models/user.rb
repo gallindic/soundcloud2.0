@@ -7,4 +7,6 @@ class User < ActiveRecord::Base
   has_many :musics, dependent: :destroy
   
   mount_uploader :image, FileUploader
+  
+  acts_as_voter
 end

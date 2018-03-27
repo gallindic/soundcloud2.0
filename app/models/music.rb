@@ -4,4 +4,6 @@ class Music < ActiveRecord::Base
     
     mount_uploader :file, FileUploader
     mount_uploader :image, FileUploader
+    
+    acts_as_votable
 end

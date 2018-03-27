@@ -28,6 +28,20 @@ class MusicsController < ApplicationController
     def update
     end
     
+    def upvote
+        @music = Music.find(params[:id])
+        @music.upvote_from current_user
+        
+        redirect_to root_path
+    end
+    
+    def downvote
+        @music = Music.find(params[:id])
+        @music.downvote_from current_user
+        
+        redirect_to root_path
+    end
+    
     def destroy
         @music = Music.find(params[:id])
         @music.destroy

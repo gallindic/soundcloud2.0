@@ -29392,3 +29392,1591 @@ Processing by PagesController#index as HTML
   [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 8]]
   Rendered layouts/_navUser.html.erb (0.5ms)
 Completed 200 OK in 54ms (Views: 52.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 194.249.251.234 at 2018-03-27 06:17:49 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#index as HTML
+  [1m[35mGenre Load (0.3ms)[0m  SELECT "genres".* FROM "genres"
+  [1m[36mMusic Load (0.2ms)[0m  [1mSELECT "musics".* FROM "musics"[0m
+  Rendered pages/index.html.erb within layouts/application (15.6ms)
+  Rendered layouts/_navGuest.html.erb (1.0ms)
+Completed 200 OK in 616ms (Views: 578.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.self-1c4f4ee2af644ff943e12f0a98acfc745c14ed19f324a258054fbc99eff6a047.css?body=1" for 194.249.251.234 at 2018-03-27 06:17:50 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 194.249.251.234 at 2018-03-27 06:17:51 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/musics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 194.249.251.234 at 2018-03-27 06:17:51 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 194.249.251.234 at 2018-03-27 06:17:51 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for 194.249.251.234 at 2018-03-27 06:17:51 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/explore" for 194.249.251.234 at 2018-03-27 06:17:55 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#explore as HTML
+  Rendered pages/explore.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navGuest.html.erb (0.3ms)
+Completed 200 OK in 42ms (Views: 40.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/index" for 194.249.251.234 at 2018-03-27 06:17:56 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  [1m[35mGenre Load (0.2ms)[0m  SELECT "genres".* FROM "genres"
+  [1m[36mMusic Load (0.2ms)[0m  [1mSELECT "musics".* FROM "musics"[0m
+  Rendered pages/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_navGuest.html.erb (0.3ms)
+Completed 200 OK in 44ms (Views: 42.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/musics/13" for 194.249.251.234 at 2018-03-27 06:17:58 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MusicsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mMusic Load (0.4ms)[0m  SELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "musics" SET "views" = ?, "updated_at" = ? WHERE "musics"."id" = ?  [["views", 3], ["updated_at", "2018-03-27 06:17:58.355756"], ["id", 13]]
+  [1m[36m (14.2ms)[0m  [1mcommit transaction[0m
+  Rendered musics/show.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navGuest.html.erb (0.4ms)
+Completed 200 OK in 113ms (Views: 67.5ms | ActiveRecord: 15.2ms)
+
+
+Started GET "/musics/music_note.jpg" for 194.249.251.234 at 2018-03-27 06:17:58 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MusicsController#show as JPEG
+  Parameters: {"id"=>"music_note"}
+  [1m[35mMusic Load (0.2ms)[0m  SELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT 1  [["id", 0]]
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.2ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Music with 'id'=music_note):
+  app/controllers/musics_controller.rb:3:in `show'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (39.0ms)
+
+
+Started GET "/index" for 194.249.251.234 at 2018-03-27 06:18:00 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  [1m[35mMusic Load (0.4ms)[0m  SELECT "musics".* FROM "musics"
+  Rendered pages/index.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_navGuest.html.erb (0.3ms)
+Completed 200 OK in 49ms (Views: 46.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/musics/music_note.jpg" for 194.249.251.234 at 2018-03-27 06:18:00 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MusicsController#show as JPEG
+  Parameters: {"id"=>"music_note"}
+  [1m[36mMusic Load (0.2ms)[0m  [1mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.2ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Music with 'id'=music_note):
+  app/controllers/musics_controller.rb:3:in `show'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (27.8ms)
+
+
+Started GET "/users/sign_in" for 194.249.251.234 at 2018-03-27 06:18:06 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (14.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (75.2ms)
+  Rendered layouts/_navGuest.html.erb (0.4ms)
+Completed 200 OK in 139ms (Views: 126.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/music_note.jpg" for 194.249.251.234 at 2018-03-27 06:18:06 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/users/music_note.jpg"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.9) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.9) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.9) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.9) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.9) lib/rack/lock.rb:17:in `call'
+  rack (1.6.9) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.9) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (50.1ms)
+
+
+Started POST "/users/sign_in" for 194.249.251.234 at 2018-03-27 06:18:08 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o3MHz7T8cPw0pAq9I/p5xFsm2zwr/CCxhNfZVLcD+bTKHmg9VcMTvNp5GZM+cwpftWqewDqb/o1ght4l3M3n+Q==", "user"=>{"email"=>"test@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "test@gmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2018-03-26 17:12:04.707123"], ["current_sign_in_at", "2018-03-27 06:18:08.885283"], ["current_sign_in_ip", "194.249.251.234"], ["sign_in_count", 8], ["updated_at", "2018-03-27 06:18:08.887814"], ["id", 8]]
+  [1m[36m (13.1ms)[0m  [1mcommit transaction[0m
+Redirected to https://soundcloud-gallindic.c9users.io/
+Completed 302 Found in 185ms (ActiveRecord: 14.1ms)
+
+
+Started GET "/" for 194.249.251.234 at 2018-03-27 06:18:09 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  [1m[35mGenre Load (0.4ms)[0m  SELECT "genres".* FROM "genres"
+  [1m[36mMusic Load (0.2ms)[0m  [1mSELECT "musics".* FROM "musics"[0m
+  Rendered pages/index.html.erb within layouts/application (4.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 8]]
+  Rendered layouts/_navUser.html.erb (1.5ms)
+Completed 200 OK in 71ms (Views: 68.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/profile/8" for 194.249.251.234 at 2018-03-27 06:18:12 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  Rendered pages/profile.html.erb within layouts/application (0.6ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 8]]
+  Rendered layouts/_navUser.html.erb (0.5ms)
+Completed 200 OK in 57ms (Views: 54.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/profile/music_note.jpg" for 194.249.251.234 at 2018-03-27 06:18:12 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#profile as JPEG
+  Parameters: {"id"=>"music_note"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.2ms)
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=music_note):
+  app/controllers/pages_controller.rb:8:in `profile'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (30.8ms)
+
+
+Started GET "/index" for 194.249.251.234 at 2018-03-27 06:18:14 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  [1m[35mGenre Load (0.3ms)[0m  SELECT "genres".* FROM "genres"
+  [1m[36mMusic Load (0.2ms)[0m  [1mSELECT "musics".* FROM "musics"[0m
+  Rendered pages/index.html.erb within layouts/application (2.8ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 8]]
+  Rendered layouts/_navUser.html.erb (0.4ms)
+Completed 200 OK in 48ms (Views: 46.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/musics/new" for 194.249.251.234 at 2018-03-27 06:18:54 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MusicsController#new as HTML
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT "genres".* FROM "genres"  ORDER BY "genres"."name" ASC[0m
+  Rendered musics/new.html.erb within layouts/application (12.9ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 8]]
+  Rendered layouts/_navUser.html.erb (1.1ms)
+Completed 200 OK in 78ms (Views: 76.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/musics/music_note.jpg" for 194.249.251.234 at 2018-03-27 06:18:55 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MusicsController#show as JPEG
+  Parameters: {"id"=>"music_note"}
+  [1m[36mMusic Load (0.2ms)[0m  [1mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.2ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Music with 'id'=music_note):
+  app/controllers/musics_controller.rb:3:in `show'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.8ms)
+
+
+Started GET "/index" for 194.249.251.234 at 2018-03-27 06:18:56 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  [1m[35mGenre Load (0.2ms)[0m  SELECT "genres".* FROM "genres"
+  [1m[36mMusic Load (0.2ms)[0m  [1mSELECT "musics".* FROM "musics"[0m
+  Rendered pages/index.html.erb within layouts/application (2.9ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 8]]
+  Rendered layouts/_navUser.html.erb (0.5ms)
+Completed 200 OK in 49ms (Views: 47.1ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/users/sign_out" for 194.249.251.234 at 2018-03-27 06:19:00 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"k/raUghyuNBa/xcJcu5zvpriffaH/fvcaYTpMWWwc9TeOLfB1rtqU+vSfzWLRAWJ9mDYrf79K0FlpshVBh01cg=="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 8]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to https://soundcloud-gallindic.c9users.io/
+Completed 302 Found in 10ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 194.249.251.234 at 2018-03-27 06:19:01 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  [1m[35mGenre Load (0.3ms)[0m  SELECT "genres".* FROM "genres"
+  [1m[36mMusic Load (0.3ms)[0m  [1mSELECT "musics".* FROM "musics"[0m
+  Rendered pages/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_navGuest.html.erb (0.3ms)
+Completed 200 OK in 62ms (Views: 60.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/musics/15" for 194.249.251.234 at 2018-03-27 06:19:18 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MusicsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mMusic Load (0.2ms)[0m  SELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "musics" SET "views" = ?, "updated_at" = ? WHERE "musics"."id" = ?  [["views", 2], ["updated_at", "2018-03-27 06:19:18.745264"], ["id", 15]]
+  [1m[36m (15.0ms)[0m  [1mcommit transaction[0m
+  Rendered musics/show.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navGuest.html.erb (0.4ms)
+Completed 200 OK in 69ms (Views: 48.9ms | ActiveRecord: 15.5ms)
+
+
+Started GET "/musics/music_note.jpg" for 194.249.251.234 at 2018-03-27 06:19:18 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MusicsController#show as JPEG
+  Parameters: {"id"=>"music_note"}
+  [1m[35mMusic Load (0.2ms)[0m  SELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT 1  [["id", 0]]
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.2ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Music with 'id'=music_note):
+  app/controllers/musics_controller.rb:3:in `show'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.2ms)
+
+
+Started GET "/index" for 194.249.251.234 at 2018-03-27 06:19:20 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  [1m[36mGenre Load (0.2ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  [1m[35mMusic Load (0.2ms)[0m  SELECT "musics".* FROM "musics"
+  Rendered pages/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_navGuest.html.erb (0.3ms)
+Completed 200 OK in 64ms (Views: 62.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/index" for 194.249.251.234 at 2018-03-27 06:19:33 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  [1m[35mMusic Load (0.2ms)[0m  SELECT "musics".* FROM "musics"
+  Rendered pages/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_navGuest.html.erb (0.3ms)
+Completed 200 OK in 46ms (Views: 44.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/explore" for 194.249.251.234 at 2018-03-27 06:19:35 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#explore as HTML
+  Rendered pages/explore.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_navGuest.html.erb (0.3ms)
+Completed 200 OK in 52ms (Views: 51.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/index" for 194.249.251.234 at 2018-03-27 06:19:35 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  [1m[35mMusic Load (0.1ms)[0m  SELECT "musics".* FROM "musics"
+  Rendered pages/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_navGuest.html.erb (0.3ms)
+Completed 200 OK in 48ms (Views: 46.5ms | ActiveRecord: 0.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to ActsAsVotableMigration (20180327063624)
+  [1m[35m (0.1ms)[0m  begin transaction
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in up at /home/ubuntu/workspace/db/migrate/20180327063624_acts_as_votable_migration.rb:12)
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "votes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "votable_id" integer, "votable_type" varchar, "voter_id" integer, "voter_type" varchar, "vote_flag" boolean, "vote_scope" varchar, "vote_weight" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_votes_on_voter_id_and_voter_type_and_vote_scope" ON "votes" ("voter_id", "voter_type", "vote_scope")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_votes_on_voter_id_and_voter_type_and_vote_scope' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_votes_on_voter_id_and_voter_type_and_vote_scope' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_votes_on_votable_id_and_votable_type_and_vote_scope" ON "votes" ("votable_id", "votable_type", "vote_scope")[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20180327063624"]]
+  [1m[36m (17.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_musics_on_genre_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_musics_on_genre_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_musics_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_musics_on_user_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_username' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_username' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_votes_on_votable_id_and_votable_type_and_vote_scope' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_votes_on_votable_id_and_votable_type_and_vote_scope' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_votes_on_voter_id_and_voter_type_and_vote_scope' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_votes_on_voter_id_and_voter_type_and_vote_scope' AND type='index'
+[0m
+
+
+Started GET "/" for 194.249.251.234 at 2018-03-27 06:46:50 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (3.5ms)
+Completed 401 Unauthorized in 50ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/pages/index.html.erb:25: unknown regexp options - pa
+unmatched close parenthesis: /);@output_buffer.safe_append='     
+'.freeze;                             link_to ("Like", like_music_path(@m.id)) 
+                             link_to ("Unike", unlike_music_path(@m.id)) 
+@output_buffer.safe_append='                        </
+/home/ubuntu/workspace/app/views/pages/index.html.erb:26: syntax error, unexpected '<'
+                    </div>
+                     ^
+/home/ubuntu/workspace/app/views/pages/index.html.erb:27: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/pages/index.html.erb:28: syntax error, unexpected '<'
+            </div>
+             ^
+/home/ubuntu/workspace/app/views/pages/index.html.erb:29: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/pages/index.html.erb:34: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/pages/index.html.erb:35: syntax error, unexpected '<'
+</div>'.freeze;@output_buffer.to_s
+ ^
+/home/ubuntu/workspace/app/views/pages/index.html.erb:35: unterminated regexp meets end of file):
+  app/views/pages/index.html.erb:25: unknown regexp options - pa
+  app/views/pages/index.html.erb:26: syntax error, unexpected '<'
+  app/views/pages/index.html.erb:27: unknown regexp options - dv
+  app/views/pages/index.html.erb:28: syntax error, unexpected '<'
+  app/views/pages/index.html.erb:29: unknown regexp options - dv
+  app/views/pages/index.html.erb:34: unknown regexp options - dv
+  app/views/pages/index.html.erb:35: syntax error, unexpected '<'
+  app/views/pages/index.html.erb:35: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (46.0ms)
+
+
+Started GET "/" for 194.249.251.234 at 2018-03-27 06:47:22 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (2.9ms)
+Completed 401 Unauthorized in 7ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/pages/index.html.erb:25: unknown regexp options - pa
+unmatched close parenthesis: /);@output_buffer.safe_append='     
+'.freeze;                             link_to ("Like", like_music_path(@m.id), method: :put) 
+                             link_to ("Unike", unlike_music_path(@m.id), method: :put) 
+@output_buffer.safe_append='                        </
+/home/ubuntu/workspace/app/views/pages/index.html.erb:26: syntax error, unexpected '<'
+                    </div>
+                     ^
+/home/ubuntu/workspace/app/views/pages/index.html.erb:27: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/pages/index.html.erb:28: syntax error, unexpected '<'
+            </div>
+             ^
+/home/ubuntu/workspace/app/views/pages/index.html.erb:29: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/pages/index.html.erb:34: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/pages/index.html.erb:35: syntax error, unexpected '<'
+</div>'.freeze;@output_buffer.to_s
+ ^
+/home/ubuntu/workspace/app/views/pages/index.html.erb:35: unterminated regexp meets end of file):
+  app/views/pages/index.html.erb:25: unknown regexp options - pa
+  app/views/pages/index.html.erb:26: syntax error, unexpected '<'
+  app/views/pages/index.html.erb:27: unknown regexp options - dv
+  app/views/pages/index.html.erb:28: syntax error, unexpected '<'
+  app/views/pages/index.html.erb:29: unknown regexp options - dv
+  app/views/pages/index.html.erb:34: unknown regexp options - dv
+  app/views/pages/index.html.erb:35: syntax error, unexpected '<'
+  app/views/pages/index.html.erb:35: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (32.0ms)
+
+
+Started GET "/" for 194.249.251.234 at 2018-03-27 06:47:34 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (1.5ms)
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/pages/index.html.erb:23: syntax error, unexpected ',', expecting ')'
+...               link_to ("Like", like_music_path(@m.id), meth...
+...                               ^
+/home/ubuntu/workspace/app/views/pages/index.html.erb:23: syntax error, unexpected ',', expecting keyword_end
+..."Like", like_music_path(@m.id), method: :put) 
+...                               ^
+/home/ubuntu/workspace/app/views/pages/index.html.erb:24: syntax error, unexpected ',', expecting ')'
+...              link_to ("Unike", unlike_music_path(@m.id), me...
+...                               ^
+/home/ubuntu/workspace/app/views/pages/index.html.erb:24: syntax error, unexpected ',', expecting keyword_end
+...ike", unlike_music_path(@m.id), method: :put) 
+...                               ^):
+  app/views/pages/index.html.erb:23: syntax error, unexpected ',', expecting ')'
+  app/views/pages/index.html.erb:23: syntax error, unexpected ',', expecting keyword_end
+  app/views/pages/index.html.erb:24: syntax error, unexpected ',', expecting ')'
+  app/views/pages/index.html.erb:24: syntax error, unexpected ',', expecting keyword_end
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (31.4ms)
+
+
+Started GET "/" for 194.249.251.234 at 2018-03-27 06:47:51 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (1.4ms)
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/pages/index.html.erb:23: syntax error, unexpected ',', expecting ')'
+...uffer.append=( link_to ("Like", like_music_path(@m.id), meth...
+...                               ^
+/home/ubuntu/workspace/app/views/pages/index.html.erb:23: syntax error, unexpected ',', expecting ')'
+..."Like", like_music_path(@m.id), method: :put) );@output_buff...
+...                               ^
+/home/ubuntu/workspace/app/views/pages/index.html.erb:23: syntax error, unexpected ')', expecting keyword_end
+...ic_path(@m.id), method: :put) );@output_buffer.safe_append='
+...                               ^
+/home/ubuntu/workspace/app/views/pages/index.html.erb:24: syntax error, unexpected ',', expecting ')'
+...ffer.append=( link_to ("Unike", unlike_music_path(@m.id), me...
+...                               ^
+/home/ubuntu/workspace/app/views/pages/index.html.erb:24: syntax error, unexpected ',', expecting ')'
+...ike", unlike_music_path(@m.id), method: :put) );@output_buff...
+...                               ^
+/home/ubuntu/workspace/app/views/pages/index.html.erb:24: syntax error, unexpected ')', expecting keyword_end
+...ic_path(@m.id), method: :put) );@output_buffer.safe_append='
+...                               ^):
+  app/views/pages/index.html.erb:23: syntax error, unexpected ',', expecting ')'
+  app/views/pages/index.html.erb:23: syntax error, unexpected ',', expecting ')'
+  app/views/pages/index.html.erb:23: syntax error, unexpected ')', expecting keyword_end
+  app/views/pages/index.html.erb:24: syntax error, unexpected ',', expecting ')'
+  app/views/pages/index.html.erb:24: syntax error, unexpected ',', expecting ')'
+  app/views/pages/index.html.erb:24: syntax error, unexpected ')', expecting keyword_end
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (34.0ms)
+
+
+Started GET "/" for 194.249.251.234 at 2018-03-27 06:48:18 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  [1m[35mGenre Load (0.3ms)[0m  SELECT "genres".* FROM "genres"
+  [1m[36mMusic Load (0.3ms)[0m  [1mSELECT "musics".* FROM "musics"[0m
+  Rendered pages/index.html.erb within layouts/application (13.9ms)
+  Rendered layouts/_navGuest.html.erb (2.3ms)
+Completed 200 OK in 571ms (Views: 568.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/bootstrap/modal.self-b16cc407b110cb558be40dda7291e1bcb6763a187a086035e5d946002beb39c1.js?body=1" for 194.249.251.234 at 2018-03-27 06:48:19 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-1c4f4ee2af644ff943e12f0a98acfc745c14ed19f324a258054fbc99eff6a047.css?body=1" for 194.249.251.234 at 2018-03-27 06:48:19 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/popper.self-b5d0395dd499f58f910fee32e5221f71c3b8e6f3229879a7b76d481c5446de10.js?body=1" for 194.249.251.234 at 2018-03-27 06:48:20 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/util.self-e642b82a9b9558c2a8dfb34433f8c486df727b1093f3a3f7ad6ef5d51f87fea1.js?body=1" for 194.249.251.234 at 2018-03-27 06:48:20 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery3.self-06c43429d1047ce3f355da574d8a9750209971b8b1b8f264f91f5518c5fcc060.js?body=1" for 194.249.251.234 at 2018-03-27 06:48:20 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tooltip.self-7c4552a145e8b8969660afabae4c0405755cd1e2ec74fce3a48d413094ac2f98.js?body=1" for 194.249.251.234 at 2018-03-27 06:48:20 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/scrollspy.self-5e6559c5957d65ff19c4fbfe2cedf307b6ae736c9d7ee7ba4a9c99b46771697d.js?body=1" for 194.249.251.234 at 2018-03-27 06:48:20 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/carousel.self-02a9b4ab5704ba8a11fe6e40e9086cee3d5914c2909a8a3e0e3f6e4d4954b8c9.js?body=1" for 194.249.251.234 at 2018-03-27 06:48:20 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/popover.self-782b855e353ac984f70e8234e5c9ef99bde0be23c02785b01bc2aa6e19363341.js?body=1" for 194.249.251.234 at 2018-03-27 06:48:20 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/dropdown.self-06243ed087bf45ef738745a758369fbe4ed9fbba77554d46ac49a4302101a7c0.js?body=1" for 194.249.251.234 at 2018-03-27 06:48:20 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/button.self-4a2e9739820f6ad0f323e4408d205582892173ce5bd77755222af4f0d23361b4.js?body=1" for 194.249.251.234 at 2018-03-27 06:48:20 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/alert.self-ff708db7950f1b1f1db2087879e35e0016aab9d91be27f314e5084c6639dec90.js?body=1" for 194.249.251.234 at 2018-03-27 06:48:20 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 194.249.251.234 at 2018-03-27 06:48:20 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-2db6ec539b9190f75e1d477b305df53d12904d5cafdd47c7ffd91ba25cbec128.js?body=1" for 194.249.251.234 at 2018-03-27 06:48:20 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/musics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 194.249.251.234 at 2018-03-27 06:48:20 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 194.249.251.234 at 2018-03-27 06:48:20 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for 194.249.251.234 at 2018-03-27 06:48:20 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tab.self-0ae04cb661eb201a1f9fa5dacfb406f0e8f6c54d6ced0897d7c638b38b5f3cad.js?body=1" for 194.249.251.234 at 2018-03-27 06:48:20 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/collapse.self-dee184bdf9a9c56c18340eceb4985c847124e53f608b3f96c85abf59a59d4e6f.js?body=1" for 194.249.251.234 at 2018-03-27 06:48:20 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 194.249.251.234 at 2018-03-27 06:48:20 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 194.249.251.234 at 2018-03-27 06:49:02 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  [1m[35mGenre Load (0.3ms)[0m  SELECT "genres".* FROM "genres"
+  [1m[36mMusic Load (0.2ms)[0m  [1mSELECT "musics".* FROM "musics"[0m
+  Rendered pages/index.html.erb within layouts/application (53.3ms)
+Completed 401 Unauthorized in 58ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined local variable or method `music' for #<#<Class:0x00000003792108>:0x007fe9fc5859d8>
+Did you mean?  @music):
+    23:                             <%= link_to "Like", like_music_path(@m.id), method: :put %>
+    24:                             <%= link_to "Unike", unlike_music_path(@m.id), method: :put %>
+    25:                         </span>
+    26:                         <p><%= music.get_upvotes.size %></p>
+    27:                     </div>
+    28:                 </div>    
+    29:             </div>
+  app/views/pages/index.html.erb:26:in `block in _app_views_pages_index_html_erb__1204730960950755087_70321468875640'
+  app/views/pages/index.html.erb:9:in `_app_views_pages_index_html_erb__1204730960950755087_70321468875640'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.1ms)
+
+
+Started GET "/" for 194.249.251.234 at 2018-03-27 06:49:10 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  [1m[35mGenre Load (0.3ms)[0m  SELECT "genres".* FROM "genres"
+  [1m[36mMusic Load (0.2ms)[0m  [1mSELECT "musics".* FROM "musics"[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?  [["votable_id", 13], ["votable_type", "Music"], ["vote_flag", "t"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 14], ["votable_type", "Music"], ["vote_flag", "t"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?  [["votable_id", 15], ["votable_type", "Music"], ["vote_flag", "t"]]
+  Rendered pages/index.html.erb within layouts/application (49.8ms)
+  Rendered layouts/_navGuest.html.erb (0.3ms)
+Completed 200 OK in 205ms (Views: 202.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.self-1c4f4ee2af644ff943e12f0a98acfc745c14ed19f324a258054fbc99eff6a047.css?body=1" for 194.249.251.234 at 2018-03-27 06:49:10 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery3.self-06c43429d1047ce3f355da574d8a9750209971b8b1b8f264f91f5518c5fcc060.js?body=1" for 194.249.251.234 at 2018-03-27 06:49:11 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/popper.self-b5d0395dd499f58f910fee32e5221f71c3b8e6f3229879a7b76d481c5446de10.js?body=1" for 194.249.251.234 at 2018-03-27 06:49:11 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/util.self-e642b82a9b9558c2a8dfb34433f8c486df727b1093f3a3f7ad6ef5d51f87fea1.js?body=1" for 194.249.251.234 at 2018-03-27 06:49:11 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/modal.self-b16cc407b110cb558be40dda7291e1bcb6763a187a086035e5d946002beb39c1.js?body=1" for 194.249.251.234 at 2018-03-27 06:49:11 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tooltip.self-7c4552a145e8b8969660afabae4c0405755cd1e2ec74fce3a48d413094ac2f98.js?body=1" for 194.249.251.234 at 2018-03-27 06:49:11 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/popover.self-782b855e353ac984f70e8234e5c9ef99bde0be23c02785b01bc2aa6e19363341.js?body=1" for 194.249.251.234 at 2018-03-27 06:49:11 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tab.self-0ae04cb661eb201a1f9fa5dacfb406f0e8f6c54d6ced0897d7c638b38b5f3cad.js?body=1" for 194.249.251.234 at 2018-03-27 06:49:11 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/carousel.self-02a9b4ab5704ba8a11fe6e40e9086cee3d5914c2909a8a3e0e3f6e4d4954b8c9.js?body=1" for 194.249.251.234 at 2018-03-27 06:49:11 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/collapse.self-dee184bdf9a9c56c18340eceb4985c847124e53f608b3f96c85abf59a59d4e6f.js?body=1" for 194.249.251.234 at 2018-03-27 06:49:11 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/dropdown.self-06243ed087bf45ef738745a758369fbe4ed9fbba77554d46ac49a4302101a7c0.js?body=1" for 194.249.251.234 at 2018-03-27 06:49:11 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/button.self-4a2e9739820f6ad0f323e4408d205582892173ce5bd77755222af4f0d23361b4.js?body=1" for 194.249.251.234 at 2018-03-27 06:49:11 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/alert.self-ff708db7950f1b1f1db2087879e35e0016aab9d91be27f314e5084c6639dec90.js?body=1" for 194.249.251.234 at 2018-03-27 06:49:11 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 194.249.251.234 at 2018-03-27 06:49:11 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 194.249.251.234 at 2018-03-27 06:49:11 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-2db6ec539b9190f75e1d477b305df53d12904d5cafdd47c7ffd91ba25cbec128.js?body=1" for 194.249.251.234 at 2018-03-27 06:49:11 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/musics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 194.249.251.234 at 2018-03-27 06:49:11 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 194.249.251.234 at 2018-03-27 06:49:11 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for 194.249.251.234 at 2018-03-27 06:49:11 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/scrollspy.self-5e6559c5957d65ff19c4fbfe2cedf307b6ae736c9d7ee7ba4a9c99b46771697d.js?body=1" for 194.249.251.234 at 2018-03-27 06:49:11 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started PUT "/musics/13/like" for 194.249.251.234 at 2018-03-27 06:49:13 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MusicsController#upvote as HTML
+  Parameters: {"authenticity_token"=>"oh6bsh+NS0fxstCCkMWAL7h9UKTbADQi492FVX9w7O4Clgmp7J83+zC2pf9TP3ZwyNhOBpPJFs7o4tWwaLZ1nA==", "id"=>"13"}
+  [1m[36mMusic Load (0.3ms)[0m  [1mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT 1[0m  [["id", 13]]
+Redirected to https://soundcloud-gallindic.c9users.io/musics/13
+Completed 302 Found in 7ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/musics/13" for 194.249.251.234 at 2018-03-27 06:49:13 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MusicsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mMusic Load (0.2ms)[0m  SELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "musics" SET "views" = ?, "updated_at" = ? WHERE "musics"."id" = ?  [["views", 4], ["updated_at", "2018-03-27 06:49:13.640948"], ["id", 13]]
+  [1m[36m (13.0ms)[0m  [1mcommit transaction[0m
+  Rendered musics/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navGuest.html.erb (0.3ms)
+Completed 200 OK in 66ms (Views: 45.9ms | ActiveRecord: 13.7ms)
+
+
+Started GET "/index" for 194.249.251.234 at 2018-03-27 06:49:15 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  [1m[35mGenre Load (0.4ms)[0m  SELECT "genres".* FROM "genres"
+  [1m[36mMusic Load (0.2ms)[0m  [1mSELECT "musics".* FROM "musics"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?  [["votable_id", 13], ["votable_type", "Music"], ["vote_flag", "t"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 14], ["votable_type", "Music"], ["vote_flag", "t"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?  [["votable_id", 15], ["votable_type", "Music"], ["vote_flag", "t"]]
+  Rendered pages/index.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_navGuest.html.erb (0.3ms)
+Completed 200 OK in 52ms (Views: 50.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/index" for 194.249.251.234 at 2018-03-27 06:50:28 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  [1m[36mGenre Load (0.6ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  [1m[35mMusic Load (0.2ms)[0m  SELECT "musics".* FROM "musics"
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 13], ["votable_type", "Music"], ["vote_flag", "t"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?  [["votable_id", 13], ["votable_type", "Music"], ["vote_flag", "f"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 14], ["votable_type", "Music"], ["vote_flag", "t"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?  [["votable_id", 14], ["votable_type", "Music"], ["vote_flag", "f"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 15], ["votable_type", "Music"], ["vote_flag", "t"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?  [["votable_id", 15], ["votable_type", "Music"], ["vote_flag", "f"]]
+  Rendered pages/index.html.erb within layouts/application (25.2ms)
+  Rendered layouts/_navGuest.html.erb (0.3ms)
+Completed 200 OK in 122ms (Views: 102.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/application.self-1c4f4ee2af644ff943e12f0a98acfc745c14ed19f324a258054fbc99eff6a047.css?body=1" for 194.249.251.234 at 2018-03-27 06:50:28 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/modal.self-b16cc407b110cb558be40dda7291e1bcb6763a187a086035e5d946002beb39c1.js?body=1" for 194.249.251.234 at 2018-03-27 06:50:29 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/popper.self-b5d0395dd499f58f910fee32e5221f71c3b8e6f3229879a7b76d481c5446de10.js?body=1" for 194.249.251.234 at 2018-03-27 06:50:29 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tooltip.self-7c4552a145e8b8969660afabae4c0405755cd1e2ec74fce3a48d413094ac2f98.js?body=1" for 194.249.251.234 at 2018-03-27 06:50:29 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery3.self-06c43429d1047ce3f355da574d8a9750209971b8b1b8f264f91f5518c5fcc060.js?body=1" for 194.249.251.234 at 2018-03-27 06:50:29 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/util.self-e642b82a9b9558c2a8dfb34433f8c486df727b1093f3a3f7ad6ef5d51f87fea1.js?body=1" for 194.249.251.234 at 2018-03-27 06:50:29 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tab.self-0ae04cb661eb201a1f9fa5dacfb406f0e8f6c54d6ced0897d7c638b38b5f3cad.js?body=1" for 194.249.251.234 at 2018-03-27 06:50:29 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/scrollspy.self-5e6559c5957d65ff19c4fbfe2cedf307b6ae736c9d7ee7ba4a9c99b46771697d.js?body=1" for 194.249.251.234 at 2018-03-27 06:50:29 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/carousel.self-02a9b4ab5704ba8a11fe6e40e9086cee3d5914c2909a8a3e0e3f6e4d4954b8c9.js?body=1" for 194.249.251.234 at 2018-03-27 06:50:29 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/dropdown.self-06243ed087bf45ef738745a758369fbe4ed9fbba77554d46ac49a4302101a7c0.js?body=1" for 194.249.251.234 at 2018-03-27 06:50:29 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/button.self-4a2e9739820f6ad0f323e4408d205582892173ce5bd77755222af4f0d23361b4.js?body=1" for 194.249.251.234 at 2018-03-27 06:50:29 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/alert.self-ff708db7950f1b1f1db2087879e35e0016aab9d91be27f314e5084c6639dec90.js?body=1" for 194.249.251.234 at 2018-03-27 06:50:29 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/popover.self-782b855e353ac984f70e8234e5c9ef99bde0be23c02785b01bc2aa6e19363341.js?body=1" for 194.249.251.234 at 2018-03-27 06:50:29 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/collapse.self-dee184bdf9a9c56c18340eceb4985c847124e53f608b3f96c85abf59a59d4e6f.js?body=1" for 194.249.251.234 at 2018-03-27 06:50:29 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 194.249.251.234 at 2018-03-27 06:50:29 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 194.249.251.234 at 2018-03-27 06:50:29 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-2db6ec539b9190f75e1d477b305df53d12904d5cafdd47c7ffd91ba25cbec128.js?body=1" for 194.249.251.234 at 2018-03-27 06:50:29 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/musics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 194.249.251.234 at 2018-03-27 06:50:29 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 194.249.251.234 at 2018-03-27 06:50:29 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for 194.249.251.234 at 2018-03-27 06:50:29 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/sign_in" for 194.249.251.234 at 2018-03-27 06:50:32 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (11.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (50.5ms)
+  Rendered layouts/_navGuest.html.erb (0.3ms)
+Completed 200 OK in 128ms (Views: 101.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/music_note.jpg" for 194.249.251.234 at 2018-03-27 06:50:32 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/users/music_note.jpg"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.9) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.9) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.9) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.9) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.9) lib/rack/lock.rb:17:in `call'
+  rack (1.6.9) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.9) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (38.2ms)
+
+
+Started POST "/users/sign_in" for 194.249.251.234 at 2018-03-27 06:50:34 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v0CEbQQdiHSaJgHNY14FBjsAoInRhzPvYpvCyOy7pwsfyBZ29w/0yFsidLCgpPNZS6W+K5lOEQNppJIt+30+eQ==", "user"=>{"email"=>"test@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "test@gmail.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2018-03-27 06:18:08.885283"], ["current_sign_in_at", "2018-03-27 06:50:34.838978"], ["last_sign_in_ip", "194.249.251.234"], ["sign_in_count", 9], ["updated_at", "2018-03-27 06:50:34.841531"], ["id", 8]]
+  [1m[35m (17.7ms)[0m  commit transaction
+Redirected to https://soundcloud-gallindic.c9users.io/
+Completed 302 Found in 186ms (ActiveRecord: 18.6ms)
+
+
+Started GET "/" for 194.249.251.234 at 2018-03-27 06:50:34 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  [1m[35mMusic Load (0.2ms)[0m  SELECT "musics".* FROM "musics"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 13], ["votable_type", "Music"], ["vote_flag", "t"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?  [["votable_id", 13], ["votable_type", "Music"], ["vote_flag", "f"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 14], ["votable_type", "Music"], ["vote_flag", "t"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?  [["votable_id", 14], ["votable_type", "Music"], ["vote_flag", "f"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 15], ["votable_type", "Music"], ["vote_flag", "t"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?  [["votable_id", 15], ["votable_type", "Music"], ["vote_flag", "f"]]
+  Rendered pages/index.html.erb within layouts/application (10.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 8]]
+  Rendered layouts/_navUser.html.erb (1.2ms)
+Completed 200 OK in 59ms (Views: 56.8ms | ActiveRecord: 1.4ms)
+
+
+Started PUT "/musics/13/like" for 194.249.251.234 at 2018-03-27 06:50:36 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MusicsController#upvote as HTML
+  Parameters: {"authenticity_token"=>"ONNl426NXr4ATEGvvh3eJT1Cs/o1mtI0dQxgGwPxzcRr0cnBWz/zapFhGqaxrpvNu7/sKRGzbS4li5PBEWxrDw==", "id"=>"13"}
+  [1m[35mMusic Load (0.3ms)[0m  SELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 8]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."voter_id" = ? AND "votes"."voter_type" = ? AND "votes"."vote_scope" IS NULL  [["votable_id", 13], ["votable_type", "Music"], ["voter_id", 8], ["voter_type", "User"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "votes" ("votable_id", "votable_type", "voter_id", "voter_type", "vote_flag", "vote_weight", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["votable_id", 13], ["votable_type", "Music"], ["voter_id", 8], ["voter_type", "User"], ["vote_flag", "t"], ["vote_weight", 1], ["created_at", "2018-03-27 06:50:36.861380"], ["updated_at", "2018-03-27 06:50:36.861380"]]
+  [1m[36m (16.4ms)[0m  [1mcommit transaction[0m
+Redirected to https://soundcloud-gallindic.c9users.io/musics
+Completed 302 Found in 43ms (ActiveRecord: 18.0ms)
+
+
+Started GET "/musics" for 194.249.251.234 at 2018-03-27 06:50:37 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+AbstractController::ActionNotFound (The action 'index' could not be found for MusicsController):
+  actionpack (4.2.5) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.5) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.5) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+  warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+  warden (1.2.7) lib/warden/manager.rb:35:in `call'
+  rack (1.6.9) lib/rack/etag.rb:24:in `call'
+  rack (1.6.9) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.9) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.9) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.9) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.5) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.9) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.9) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.9) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.9) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.9) lib/rack/lock.rb:17:in `call'
+  rack (1.6.9) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.9) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.8ms)
+
+
+Started GET "/" for 194.249.251.234 at 2018-03-27 06:51:01 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  [1m[35mGenre Load (0.6ms)[0m  SELECT "genres".* FROM "genres"
+  [1m[36mMusic Load (0.3ms)[0m  [1mSELECT "musics".* FROM "musics"[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?  [["votable_id", 13], ["votable_type", "Music"], ["vote_flag", "t"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 13], ["votable_type", "Music"], ["vote_flag", "f"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?  [["votable_id", 14], ["votable_type", "Music"], ["vote_flag", "t"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 14], ["votable_type", "Music"], ["vote_flag", "f"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?  [["votable_id", 15], ["votable_type", "Music"], ["vote_flag", "t"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 15], ["votable_type", "Music"], ["vote_flag", "f"]]
+  Rendered pages/index.html.erb within layouts/application (23.6ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 8]]
+  Rendered layouts/_navUser.html.erb (0.8ms)
+Completed 200 OK in 109ms (Views: 88.4ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/application.self-1c4f4ee2af644ff943e12f0a98acfc745c14ed19f324a258054fbc99eff6a047.css?body=1" for 194.249.251.234 at 2018-03-27 06:51:01 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery3.self-06c43429d1047ce3f355da574d8a9750209971b8b1b8f264f91f5518c5fcc060.js?body=1" for 194.249.251.234 at 2018-03-27 06:51:01 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/popper.self-b5d0395dd499f58f910fee32e5221f71c3b8e6f3229879a7b76d481c5446de10.js?body=1" for 194.249.251.234 at 2018-03-27 06:51:01 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/modal.self-b16cc407b110cb558be40dda7291e1bcb6763a187a086035e5d946002beb39c1.js?body=1" for 194.249.251.234 at 2018-03-27 06:51:01 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/popover.self-782b855e353ac984f70e8234e5c9ef99bde0be23c02785b01bc2aa6e19363341.js?body=1" for 194.249.251.234 at 2018-03-27 06:51:01 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tab.self-0ae04cb661eb201a1f9fa5dacfb406f0e8f6c54d6ced0897d7c638b38b5f3cad.js?body=1" for 194.249.251.234 at 2018-03-27 06:51:01 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/collapse.self-dee184bdf9a9c56c18340eceb4985c847124e53f608b3f96c85abf59a59d4e6f.js?body=1" for 194.249.251.234 at 2018-03-27 06:51:02 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/scrollspy.self-5e6559c5957d65ff19c4fbfe2cedf307b6ae736c9d7ee7ba4a9c99b46771697d.js?body=1" for 194.249.251.234 at 2018-03-27 06:51:02 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/carousel.self-02a9b4ab5704ba8a11fe6e40e9086cee3d5914c2909a8a3e0e3f6e4d4954b8c9.js?body=1" for 194.249.251.234 at 2018-03-27 06:51:02 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/dropdown.self-06243ed087bf45ef738745a758369fbe4ed9fbba77554d46ac49a4302101a7c0.js?body=1" for 194.249.251.234 at 2018-03-27 06:51:02 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/button.self-4a2e9739820f6ad0f323e4408d205582892173ce5bd77755222af4f0d23361b4.js?body=1" for 194.249.251.234 at 2018-03-27 06:51:02 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/util.self-e642b82a9b9558c2a8dfb34433f8c486df727b1093f3a3f7ad6ef5d51f87fea1.js?body=1" for 194.249.251.234 at 2018-03-27 06:51:02 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/alert.self-ff708db7950f1b1f1db2087879e35e0016aab9d91be27f314e5084c6639dec90.js?body=1" for 194.249.251.234 at 2018-03-27 06:51:02 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tooltip.self-7c4552a145e8b8969660afabae4c0405755cd1e2ec74fce3a48d413094ac2f98.js?body=1" for 194.249.251.234 at 2018-03-27 06:51:02 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 194.249.251.234 at 2018-03-27 06:51:02 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 194.249.251.234 at 2018-03-27 06:51:02 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-2db6ec539b9190f75e1d477b305df53d12904d5cafdd47c7ffd91ba25cbec128.js?body=1" for 194.249.251.234 at 2018-03-27 06:51:02 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/musics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 194.249.251.234 at 2018-03-27 06:51:02 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 194.249.251.234 at 2018-03-27 06:51:02 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for 194.249.251.234 at 2018-03-27 06:51:02 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started PUT "/musics/14/like" for 194.249.251.234 at 2018-03-27 06:51:06 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MusicsController#upvote as HTML
+  Parameters: {"authenticity_token"=>"NqRcgE6/jfvp7Lfti786HOAS3xxFyH5Knq+/5ryTkK5lpvCiew0gL3jB7OSEDH/0Zu+Az2HhwVDOKEw8rg42ZQ==", "id"=>"14"}
+  [1m[36mMusic Load (0.4ms)[0m  [1mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 8]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."voter_id" = ? AND "votes"."voter_type" = ? AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 14], ["votable_type", "Music"], ["voter_id", 8], ["voter_type", "User"]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "votes" ("votable_id", "votable_type", "voter_id", "voter_type", "vote_flag", "vote_weight", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["votable_id", 14], ["votable_type", "Music"], ["voter_id", 8], ["voter_type", "User"], ["vote_flag", "t"], ["vote_weight", 1], ["created_at", "2018-03-27 06:51:06.405028"], ["updated_at", "2018-03-27 06:51:06.405028"]]
+  [1m[35m (12.3ms)[0m  commit transaction
+Redirected to https://soundcloud-gallindic.c9users.io/musics/14
+Completed 302 Found in 22ms (ActiveRecord: 13.7ms)
+
+
+Started GET "/musics/14" for 194.249.251.234 at 2018-03-27 06:51:06 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MusicsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mMusic Load (0.2ms)[0m  [1mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "musics" SET "views" = ?, "updated_at" = ? WHERE "musics"."id" = ?[0m  [["views", 5], ["updated_at", "2018-03-27 06:51:06.523397"], ["id", 14]]
+  [1m[35m (13.8ms)[0m  commit transaction
+  Rendered musics/show.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 8]]
+  Rendered layouts/_navUser.html.erb (0.6ms)
+Completed 200 OK in 77ms (Views: 56.2ms | ActiveRecord: 14.7ms)
+
+
+Started GET "/index" for 194.249.251.234 at 2018-03-27 06:51:08 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  [1m[35mGenre Load (0.3ms)[0m  SELECT "genres".* FROM "genres"
+  [1m[36mMusic Load (0.2ms)[0m  [1mSELECT "musics".* FROM "musics"[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?  [["votable_id", 13], ["votable_type", "Music"], ["vote_flag", "t"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 13], ["votable_type", "Music"], ["vote_flag", "f"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?  [["votable_id", 14], ["votable_type", "Music"], ["vote_flag", "t"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 14], ["votable_type", "Music"], ["vote_flag", "f"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?  [["votable_id", 15], ["votable_type", "Music"], ["vote_flag", "t"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 15], ["votable_type", "Music"], ["vote_flag", "f"]]
+  Rendered pages/index.html.erb within layouts/application (11.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 8]]
+  Rendered layouts/_navUser.html.erb (0.6ms)
+Completed 200 OK in 63ms (Views: 60.6ms | ActiveRecord: 1.4ms)
+
+
+Started PUT "/musics/13/unlike" for 194.249.251.234 at 2018-03-27 06:51:10 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MusicsController#downvote as HTML
+  Parameters: {"authenticity_token"=>"VmgF1636qafN3AGhmlQbBNIlzYq2h9JPYS/jbyPc5NIFaqn1mEgEc1zxWqiV517sVNiSWZKubVUxqBC1MUFCGQ==", "id"=>"13"}
+  [1m[36mMusic Load (0.2ms)[0m  [1mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 8]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."voter_id" = ? AND "votes"."voter_type" = ? AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 13], ["votable_type", "Music"], ["voter_id", 8], ["voter_type", "User"]]
+  [1m[35mActsAsVotable::Vote Load (0.3ms)[0m  SELECT  "votes".* FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."voter_id" = ? AND "votes"."voter_type" = ? AND "votes"."vote_scope" IS NULL  ORDER BY "votes"."id" DESC LIMIT 1  [["votable_id", 13], ["votable_type", "Music"], ["voter_id", 8], ["voter_type", "User"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "votes" SET "vote_flag" = ?, "updated_at" = ? WHERE "votes"."id" = ?  [["vote_flag", "f"], ["updated_at", "2018-03-27 06:51:10.716073"], ["id", 1]]
+  [1m[36m (13.6ms)[0m  [1mcommit transaction[0m
+Redirected to https://soundcloud-gallindic.c9users.io/musics/13
+Completed 302 Found in 23ms (ActiveRecord: 14.8ms)
+
+
+Started GET "/musics/13" for 194.249.251.234 at 2018-03-27 06:51:10 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MusicsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mMusic Load (0.3ms)[0m  SELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "musics" SET "views" = ?, "updated_at" = ? WHERE "musics"."id" = ?  [["views", 5], ["updated_at", "2018-03-27 06:51:10.828350"], ["id", 13]]
+  [1m[36m (12.0ms)[0m  [1mcommit transaction[0m
+  Rendered musics/show.html.erb within layouts/application (0.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 8]]
+  Rendered layouts/_navUser.html.erb (0.7ms)
+Completed 200 OK in 90ms (Views: 71.2ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/index" for 194.249.251.234 at 2018-03-27 06:51:12 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  [1m[35mMusic Load (0.2ms)[0m  SELECT "musics".* FROM "musics"
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 13], ["votable_type", "Music"], ["vote_flag", "t"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?  [["votable_id", 13], ["votable_type", "Music"], ["vote_flag", "f"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 14], ["votable_type", "Music"], ["vote_flag", "t"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?  [["votable_id", 14], ["votable_type", "Music"], ["vote_flag", "f"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 15], ["votable_type", "Music"], ["vote_flag", "t"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?  [["votable_id", 15], ["votable_type", "Music"], ["vote_flag", "f"]]
+  Rendered pages/index.html.erb within layouts/application (12.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 8]]
+  Rendered layouts/_navUser.html.erb (0.5ms)
+Completed 200 OK in 160ms (Views: 157.1ms | ActiveRecord: 1.5ms)
+
+
+Started PUT "/musics/13/unlike" for 194.249.251.234 at 2018-03-27 06:51:14 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MusicsController#downvote as HTML
+  Parameters: {"authenticity_token"=>"DWNQrh//2WrY6gdhbQz/h4GsT6XD/ejpc6VOyeWP8PBeYfyMKk10vknHXGhiv7pvB1EQdufUV/MjIr0T9xJWOw==", "id"=>"13"}
+  [1m[35mMusic Load (0.2ms)[0m  SELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 8]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."voter_id" = ? AND "votes"."voter_type" = ? AND "votes"."vote_scope" IS NULL  [["votable_id", 13], ["votable_type", "Music"], ["voter_id", 8], ["voter_type", "User"]]
+  [1m[36mActsAsVotable::Vote Load (0.1ms)[0m  [1mSELECT  "votes".* FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."voter_id" = ? AND "votes"."voter_type" = ? AND "votes"."vote_scope" IS NULL  ORDER BY "votes"."id" DESC LIMIT 1[0m  [["votable_id", 13], ["votable_type", "Music"], ["voter_id", 8], ["voter_type", "User"]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to https://soundcloud-gallindic.c9users.io/musics/13
+Completed 302 Found in 9ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/musics/13" for 194.249.251.234 at 2018-03-27 06:51:14 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MusicsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mMusic Load (0.3ms)[0m  SELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "musics" SET "views" = ?, "updated_at" = ? WHERE "musics"."id" = ?  [["views", 6], ["updated_at", "2018-03-27 06:51:14.813573"], ["id", 13]]
+  [1m[36m (12.6ms)[0m  [1mcommit transaction[0m
+  Rendered musics/show.html.erb within layouts/application (0.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 8]]
+  Rendered layouts/_navUser.html.erb (1.4ms)
+Completed 200 OK in 130ms (Views: 107.3ms | ActiveRecord: 13.6ms)
+
+
+Started GET "/index" for 194.249.251.234 at 2018-03-27 06:51:16 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  [1m[35mMusic Load (1.0ms)[0m  SELECT "musics".* FROM "musics"
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 13], ["votable_type", "Music"], ["vote_flag", "t"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?  [["votable_id", 13], ["votable_type", "Music"], ["vote_flag", "f"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 14], ["votable_type", "Music"], ["vote_flag", "t"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?  [["votable_id", 14], ["votable_type", "Music"], ["vote_flag", "f"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 15], ["votable_type", "Music"], ["vote_flag", "t"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?  [["votable_id", 15], ["votable_type", "Music"], ["vote_flag", "f"]]
+  Rendered pages/index.html.erb within layouts/application (16.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 8]]
+  Rendered layouts/_navUser.html.erb (0.5ms)
+Completed 200 OK in 135ms (Views: 131.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/index" for 194.249.251.234 at 2018-03-27 06:51:59 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  [1m[35mGenre Load (0.6ms)[0m  SELECT "genres".* FROM "genres"
+  [1m[36mMusic Load (0.3ms)[0m  [1mSELECT "musics".* FROM "musics"[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?  [["votable_id", 13], ["votable_type", "Music"], ["vote_flag", "t"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 13], ["votable_type", "Music"], ["vote_flag", "f"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?  [["votable_id", 14], ["votable_type", "Music"], ["vote_flag", "t"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 14], ["votable_type", "Music"], ["vote_flag", "f"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?  [["votable_id", 15], ["votable_type", "Music"], ["vote_flag", "t"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 15], ["votable_type", "Music"], ["vote_flag", "f"]]
+  Rendered pages/index.html.erb within layouts/application (23.8ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 8]]
+  Rendered layouts/_navUser.html.erb (0.6ms)
+Completed 200 OK in 111ms (Views: 90.8ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/jquery3.self-06c43429d1047ce3f355da574d8a9750209971b8b1b8f264f91f5518c5fcc060.js?body=1" for 194.249.251.234 at 2018-03-27 06:52:00 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/popper.self-b5d0395dd499f58f910fee32e5221f71c3b8e6f3229879a7b76d481c5446de10.js?body=1" for 194.249.251.234 at 2018-03-27 06:52:00 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tooltip.self-7c4552a145e8b8969660afabae4c0405755cd1e2ec74fce3a48d413094ac2f98.js?body=1" for 194.249.251.234 at 2018-03-27 06:52:00 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tab.self-0ae04cb661eb201a1f9fa5dacfb406f0e8f6c54d6ced0897d7c638b38b5f3cad.js?body=1" for 194.249.251.234 at 2018-03-27 06:52:00 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/scrollspy.self-5e6559c5957d65ff19c4fbfe2cedf307b6ae736c9d7ee7ba4a9c99b46771697d.js?body=1" for 194.249.251.234 at 2018-03-27 06:52:00 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-1c4f4ee2af644ff943e12f0a98acfc745c14ed19f324a258054fbc99eff6a047.css?body=1" for 194.249.251.234 at 2018-03-27 06:52:00 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/carousel.self-02a9b4ab5704ba8a11fe6e40e9086cee3d5914c2909a8a3e0e3f6e4d4954b8c9.js?body=1" for 194.249.251.234 at 2018-03-27 06:52:00 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/dropdown.self-06243ed087bf45ef738745a758369fbe4ed9fbba77554d46ac49a4302101a7c0.js?body=1" for 194.249.251.234 at 2018-03-27 06:52:00 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/util.self-e642b82a9b9558c2a8dfb34433f8c486df727b1093f3a3f7ad6ef5d51f87fea1.js?body=1" for 194.249.251.234 at 2018-03-27 06:52:00 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/modal.self-b16cc407b110cb558be40dda7291e1bcb6763a187a086035e5d946002beb39c1.js?body=1" for 194.249.251.234 at 2018-03-27 06:52:00 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/button.self-4a2e9739820f6ad0f323e4408d205582892173ce5bd77755222af4f0d23361b4.js?body=1" for 194.249.251.234 at 2018-03-27 06:52:00 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/alert.self-ff708db7950f1b1f1db2087879e35e0016aab9d91be27f314e5084c6639dec90.js?body=1" for 194.249.251.234 at 2018-03-27 06:52:00 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/popover.self-782b855e353ac984f70e8234e5c9ef99bde0be23c02785b01bc2aa6e19363341.js?body=1" for 194.249.251.234 at 2018-03-27 06:52:01 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 194.249.251.234 at 2018-03-27 06:52:01 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 194.249.251.234 at 2018-03-27 06:52:01 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-2db6ec539b9190f75e1d477b305df53d12904d5cafdd47c7ffd91ba25cbec128.js?body=1" for 194.249.251.234 at 2018-03-27 06:52:01 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/musics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 194.249.251.234 at 2018-03-27 06:52:01 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 194.249.251.234 at 2018-03-27 06:52:01 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for 194.249.251.234 at 2018-03-27 06:52:01 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/collapse.self-dee184bdf9a9c56c18340eceb4985c847124e53f608b3f96c85abf59a59d4e6f.js?body=1" for 194.249.251.234 at 2018-03-27 06:52:01 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started PUT "/musics/14/unlike" for 194.249.251.234 at 2018-03-27 06:52:03 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MusicsController#downvote as HTML
+  Parameters: {"authenticity_token"=>"Zvxv9IQwuaYcJV8Oc153fECr+r/c5Z3mjeoGvBUzFIQ1/sPWsYIUco0IBAd87TKUxlalbPjMIvzdbfVmB66yTw==", "id"=>"14"}
+  [1m[36mMusic Load (0.3ms)[0m  [1mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 8]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."voter_id" = ? AND "votes"."voter_type" = ? AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 14], ["votable_type", "Music"], ["voter_id", 8], ["voter_type", "User"]]
+  [1m[35mActsAsVotable::Vote Load (0.2ms)[0m  SELECT  "votes".* FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."voter_id" = ? AND "votes"."voter_type" = ? AND "votes"."vote_scope" IS NULL  ORDER BY "votes"."id" DESC LIMIT 1  [["votable_id", 14], ["votable_type", "Music"], ["voter_id", 8], ["voter_type", "User"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "votes" SET "vote_flag" = ?, "updated_at" = ? WHERE "votes"."id" = ?  [["vote_flag", "f"], ["updated_at", "2018-03-27 06:52:03.335250"], ["id", 2]]
+  [1m[36m (13.5ms)[0m  [1mcommit transaction[0m
+Redirected to https://soundcloud-gallindic.c9users.io/
+Completed 302 Found in 24ms (ActiveRecord: 14.8ms)
+
+
+Started GET "/" for 194.249.251.234 at 2018-03-27 06:52:03 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  [1m[35mGenre Load (0.3ms)[0m  SELECT "genres".* FROM "genres"
+  [1m[36mMusic Load (0.2ms)[0m  [1mSELECT "musics".* FROM "musics"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?  [["votable_id", 13], ["votable_type", "Music"], ["vote_flag", "t"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 13], ["votable_type", "Music"], ["vote_flag", "f"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?  [["votable_id", 14], ["votable_type", "Music"], ["vote_flag", "t"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 14], ["votable_type", "Music"], ["vote_flag", "f"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?  [["votable_id", 15], ["votable_type", "Music"], ["vote_flag", "t"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 15], ["votable_type", "Music"], ["vote_flag", "f"]]
+  Rendered pages/index.html.erb within layouts/application (10.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 8]]
+  Rendered layouts/_navUser.html.erb (0.6ms)
+Completed 200 OK in 64ms (Views: 61.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 194.249.251.234 at 2018-03-27 06:52:15 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  [1m[36mGenre Load (0.5ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  [1m[35mMusic Load (0.2ms)[0m  SELECT "musics".* FROM "musics"
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 13], ["votable_type", "Music"], ["vote_flag", "t"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?  [["votable_id", 13], ["votable_type", "Music"], ["vote_flag", "f"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 14], ["votable_type", "Music"], ["vote_flag", "t"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?  [["votable_id", 14], ["votable_type", "Music"], ["vote_flag", "f"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 15], ["votable_type", "Music"], ["vote_flag", "t"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?  [["votable_id", 15], ["votable_type", "Music"], ["vote_flag", "f"]]
+  Rendered pages/index.html.erb within layouts/application (22.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 8]]
+  Rendered layouts/_navUser.html.erb (0.6ms)
+Completed 200 OK in 105ms (Views: 81.4ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/application.self-1c4f4ee2af644ff943e12f0a98acfc745c14ed19f324a258054fbc99eff6a047.css?body=1" for 194.249.251.234 at 2018-03-27 06:52:15 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/popover.self-782b855e353ac984f70e8234e5c9ef99bde0be23c02785b01bc2aa6e19363341.js?body=1" for 194.249.251.234 at 2018-03-27 06:52:16 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/popper.self-b5d0395dd499f58f910fee32e5221f71c3b8e6f3229879a7b76d481c5446de10.js?body=1" for 194.249.251.234 at 2018-03-27 06:52:16 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery3.self-06c43429d1047ce3f355da574d8a9750209971b8b1b8f264f91f5518c5fcc060.js?body=1" for 194.249.251.234 at 2018-03-27 06:52:16 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/util.self-e642b82a9b9558c2a8dfb34433f8c486df727b1093f3a3f7ad6ef5d51f87fea1.js?body=1" for 194.249.251.234 at 2018-03-27 06:52:16 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/modal.self-b16cc407b110cb558be40dda7291e1bcb6763a187a086035e5d946002beb39c1.js?body=1" for 194.249.251.234 at 2018-03-27 06:52:16 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tooltip.self-7c4552a145e8b8969660afabae4c0405755cd1e2ec74fce3a48d413094ac2f98.js?body=1" for 194.249.251.234 at 2018-03-27 06:52:16 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tab.self-0ae04cb661eb201a1f9fa5dacfb406f0e8f6c54d6ced0897d7c638b38b5f3cad.js?body=1" for 194.249.251.234 at 2018-03-27 06:52:16 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/collapse.self-dee184bdf9a9c56c18340eceb4985c847124e53f608b3f96c85abf59a59d4e6f.js?body=1" for 194.249.251.234 at 2018-03-27 06:52:16 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/scrollspy.self-5e6559c5957d65ff19c4fbfe2cedf307b6ae736c9d7ee7ba4a9c99b46771697d.js?body=1" for 194.249.251.234 at 2018-03-27 06:52:16 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/carousel.self-02a9b4ab5704ba8a11fe6e40e9086cee3d5914c2909a8a3e0e3f6e4d4954b8c9.js?body=1" for 194.249.251.234 at 2018-03-27 06:52:16 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/button.self-4a2e9739820f6ad0f323e4408d205582892173ce5bd77755222af4f0d23361b4.js?body=1" for 194.249.251.234 at 2018-03-27 06:52:16 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/dropdown.self-06243ed087bf45ef738745a758369fbe4ed9fbba77554d46ac49a4302101a7c0.js?body=1" for 194.249.251.234 at 2018-03-27 06:52:16 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/alert.self-ff708db7950f1b1f1db2087879e35e0016aab9d91be27f314e5084c6639dec90.js?body=1" for 194.249.251.234 at 2018-03-27 06:52:16 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 194.249.251.234 at 2018-03-27 06:52:16 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-2db6ec539b9190f75e1d477b305df53d12904d5cafdd47c7ffd91ba25cbec128.js?body=1" for 194.249.251.234 at 2018-03-27 06:52:16 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/musics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 194.249.251.234 at 2018-03-27 06:52:16 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 194.249.251.234 at 2018-03-27 06:52:16 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for 194.249.251.234 at 2018-03-27 06:52:16 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 194.249.251.234 at 2018-03-27 06:52:16 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started PUT "/musics/15/like" for 194.249.251.234 at 2018-03-27 06:52:19 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MusicsController#upvote as HTML
+  Parameters: {"authenticity_token"=>"jo/TA2emVDM/zLw3Cs2WiFEmRZgpfBm6vNGD+vTUEabdjX8hUhT5567h5z4FftNg19saSw1VpqDsVnAg5km3bQ==", "id"=>"15"}
+  [1m[35mMusic Load (0.4ms)[0m  SELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 8]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."voter_id" = ? AND "votes"."voter_type" = ? AND "votes"."vote_scope" IS NULL  [["votable_id", 15], ["votable_type", "Music"], ["voter_id", 8], ["voter_type", "User"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "votes" ("votable_id", "votable_type", "voter_id", "voter_type", "vote_flag", "vote_weight", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["votable_id", 15], ["votable_type", "Music"], ["voter_id", 8], ["voter_type", "User"], ["vote_flag", "t"], ["vote_weight", 1], ["created_at", "2018-03-27 06:52:19.854324"], ["updated_at", "2018-03-27 06:52:19.854324"]]
+  [1m[36m (14.7ms)[0m  [1mcommit transaction[0m
+Redirected to https://soundcloud-gallindic.c9users.io/
+Completed 302 Found in 25ms (ActiveRecord: 16.0ms)
+
+
+Started GET "/" for 194.249.251.234 at 2018-03-27 06:52:20 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  [1m[35mGenre Load (0.4ms)[0m  SELECT "genres".* FROM "genres"
+  [1m[36mMusic Load (0.2ms)[0m  [1mSELECT "musics".* FROM "musics"[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?  [["votable_id", 13], ["votable_type", "Music"], ["vote_flag", "t"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 13], ["votable_type", "Music"], ["vote_flag", "f"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?  [["votable_id", 14], ["votable_type", "Music"], ["vote_flag", "t"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 14], ["votable_type", "Music"], ["vote_flag", "f"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?  [["votable_id", 15], ["votable_type", "Music"], ["vote_flag", "t"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 15], ["votable_type", "Music"], ["vote_flag", "f"]]
+  Rendered pages/index.html.erb within layouts/application (12.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 8]]
+  Rendered layouts/_navUser.html.erb (0.5ms)
+Completed 200 OK in 63ms (Views: 60.4ms | ActiveRecord: 1.7ms)
+
+
+Started PUT "/musics/14/like" for 194.249.251.234 at 2018-03-27 06:52:22 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MusicsController#upvote as HTML
+  Parameters: {"authenticity_token"=>"y/CIKvicgW7DpFA17O9I9u/H66MbFKWlvfylKO5U3G+Y8iQIzS4sulKJCzzjXA0eaTq0cD89Gr/te1by/Ml6pA==", "id"=>"14"}
+  [1m[36mMusic Load (0.2ms)[0m  [1mSELECT  "musics".* FROM "musics" WHERE "musics"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 8]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."voter_id" = ? AND "votes"."voter_type" = ? AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 14], ["votable_type", "Music"], ["voter_id", 8], ["voter_type", "User"]]
+  [1m[35mActsAsVotable::Vote Load (0.3ms)[0m  SELECT  "votes".* FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."voter_id" = ? AND "votes"."voter_type" = ? AND "votes"."vote_scope" IS NULL  ORDER BY "votes"."id" DESC LIMIT 1  [["votable_id", 14], ["votable_type", "Music"], ["voter_id", 8], ["voter_type", "User"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "votes" SET "vote_flag" = ?, "updated_at" = ? WHERE "votes"."id" = ?  [["vote_flag", "t"], ["updated_at", "2018-03-27 06:52:22.510957"], ["id", 2]]
+  [1m[36m (14.4ms)[0m  [1mcommit transaction[0m
+Redirected to https://soundcloud-gallindic.c9users.io/
+Completed 302 Found in 24ms (ActiveRecord: 15.7ms)
+
+
+Started GET "/" for 194.249.251.234 at 2018-03-27 06:52:22 +0000
+Cannot render console from 194.249.251.234! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  [1m[35mGenre Load (0.4ms)[0m  SELECT "genres".* FROM "genres"
+  [1m[36mMusic Load (0.2ms)[0m  [1mSELECT "musics".* FROM "musics"[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?  [["votable_id", 13], ["votable_type", "Music"], ["vote_flag", "t"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 13], ["votable_type", "Music"], ["vote_flag", "f"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?  [["votable_id", 14], ["votable_type", "Music"], ["vote_flag", "t"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 14], ["votable_type", "Music"], ["vote_flag", "f"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?  [["votable_id", 15], ["votable_type", "Music"], ["vote_flag", "t"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 15], ["votable_type", "Music"], ["vote_flag", "f"]]
+  Rendered pages/index.html.erb within layouts/application (12.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 8]]
+  Rendered layouts/_navUser.html.erb (0.4ms)
+Completed 200 OK in 75ms (Views: 72.8ms | ActiveRecord: 1.6ms)

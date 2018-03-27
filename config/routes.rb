@@ -7,7 +7,12 @@ Rails.application.routes.draw do
   # root 'welcome#index'
   
   #Nardi route za music controller
-  resources :musics
+  resources :musics do
+    member do
+      put "like" => "musics#upvote"
+      put "unlike" => "musics#downvote"
+    end
+  end
   
   #Root page
   root 'pages#index'
