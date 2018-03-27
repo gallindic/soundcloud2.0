@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
     def index
         @music = Music.all
+        @genre = Genre.all
     end
     
     def profile

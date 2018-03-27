@@ -1,6 +1,9 @@
 class MusicsController < ApplicationController
     def show
         @music = Music.find(params[:id])
+        
+        v = @music.views += 1
+        @music.update_attribute "views", v
     end
     
     def new

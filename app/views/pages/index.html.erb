@@ -1,6 +1,11 @@
 <div class="row">
-    <div class="col-3"></div>
-    <div class="col-6">
+    <div class="col-3 p-1">
+        <h5 class="mt-2 mb-3 text-center">Genres</h5>
+        <% for @g in @genre %>
+            <p class="genre-box"><%= @g.name %></p>
+        <% end %>
+    </div>
+    <div class="col-6 music-box">
       <% for @m in @music %>
         <div class="card box float-left">
             <div class="card-body">
@@ -14,12 +19,14 @@
                 <div class="float-right music-info">
                     <div class="card-block">
                         <p>Title: <%= link_to @m.title, music_path(@m.id) %><span class="float-right"><%= @m.created_at.strftime("%d-%m-%Y") %></span></p>
-                        <p>Description: <%= @m.description %></p>
+                        <span>Views: <%= @m.views %></span>
                     </div>
                 </div>    
             </div>
         </div>
     <% end %>  
     </div>
-    <div class="col-3"></div>
+    <div class="col-3 p-1">
+        
+    </div>
 </div>
