@@ -18,12 +18,10 @@
                 </div>
                 <div class="float-right music-info">
                     <div class="card-block">
-                        <p>Title: <%= link_to @m.title, music_path(@m.id) %><span class="float-right"><%= @m.created_at.strftime("%d-%m-%Y") %></span></p>
-                        <span>Views: <%= @m.views %>     
-                            <%= link_to "Like", like_music_path(@m.id), method: :put %>
-                            <%= link_to "Unike", unlike_music_path(@m.id), method: :put %>
-                        </span>
-                        <p>Likes: <%= @m.get_upvotes.size %> Unlikes: <%= @m.get_downvotes.size %></p>
+                        <span>Title: <%= link_to @m.title, music_path(@m.id) %><span class="float-right"><%= @m.created_at.strftime("%d-%m-%Y") %></span></span>
+                        <p> 
+                            Views: <%= @m.views %> Likes: <%= @m.get_upvotes.size %> Unlikes: <%= @m.get_downvotes.size %>
+                        </p>
                     </div>
                 </div>    
             </div>

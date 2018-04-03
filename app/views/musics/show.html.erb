@@ -1,7 +1,45 @@
-<h1>Music title: <%= @music.title %></h1>
-<audio src="<%= @music.file.url() %>" type="audio/mpeg" controls>
-Your browser does not support the audio element.
-</audio>
-
-<p><%= @music.views %></p>
+<div class="jumbotron bg-dark-gray">
+    <div class="container">
+        <div class="jumbotron-content float-left">
+            <div class="jumbotron-title">
+                <span class="jumbotron-user-music"><%= link_to @user.username, profile_path(@user.id) %> - <%= @music.title %></span>
+            </div>
+            <div class="jumbotron-music">
+                <audio src="<%= @music.file.url() %>" type="audio/mpeg" controls class="music-controler">
+                    Your browser does not support the audio element.
+                    </audio>            
+            </div>
+        </div>
+        <div class="jumbotron-image float-right">
+            <% if @music.image.present? %>
+                <%= image_tag @music.image_url.to_s, class: "music-cover" %>
+            <% else %>
+                <img src="../music_note.jpg" class="music-cover" />
+            <% end %>
+        </div>
+        <div class="roww"></div>
+    </div>
+</div>
+<div class="music-info">
+    <button class="btn btn-default" disabled><i class="fa fa-eye" aria-hidden="true"></i> <%= @music.views %></button>
+    <% if user_signed_in? %>
+         <%= link_to like_music_path(@music.id), method: :put do %>
+             <button class="btn btn-default"><i class="fa fa-thumbs-up" aria-hidden="true"></i> <%= @music.get_upvotes.size %></button>
+         <% end %>
+         <%= link_to unlike_music_path(@music.id), method: :put do %>
+             <button class="btn btn-default"><i class="fa fa-thumbs-down" aria-hidden="true"></i> <%= @music.get_downvotes.size %></button>
+         <% end %>
+    <% else %>     
+         <button class="btn btn-default" disabled><i class="fa fa-thumbs-up" aria-hidden="true"></i> <%= @music.get_upvotes.size %></i></button>
+         <button class="btn btn-default" disabled><i class="fa fa-thumbs-down" aria-hidden="true"></i> <%= @music.get_downvotes.size %></button>
+    <% end %>
+</div>
+<div class="comments">
+    <%= render 'comments/form' %>
+    <% for @c in @comments %>
+        <div class="comment box">
+            <p><%= @c.content %></p>
+        </div>
+    <% end %>
+</div>
 <br/>

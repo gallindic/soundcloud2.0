@@ -10,9 +10,12 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ /*
+ *= require font-awesome
  */
 
  @import "bootstrap";
+@import "font-awesome";
 @import url('https://fonts.googleapis.com/css?family=Poppins');
  
   *{
@@ -59,3 +62,47 @@
   border-left: 1px solid rgba(0, 0, 0, 0.125);;
   border-right: 1px solid rgba(0, 0, 0, 0.125);;
  }
+ 
+ .jumbotron-music{
+  margin-top: 2.5em;
+ }
+ 
+ .jumbotron-user-music{
+  font-size: 2em;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  
+ }
+ 
+ .jumbotron-content{
+  width: 70%;
+  padding: 1em;
+ }
+ 
+ .jumbotron-image{
+  width: 30%;
+  text-align: right;
+ }
+ 
+ .music-cover{
+  width: 50%;
+ }
+ 
+ .music-controler{
+  width:100%;
+ }
+ 
+ .roww{
+  content: '';
+  clear: both;
+ }
+ 
+ .bg-dark-gray{
+  background-color: #bbbbbb;
+ }
+ 
+ .comments{
+  margin-top: 2em;
+ }
+ 
+ textarea { resize: none; }
