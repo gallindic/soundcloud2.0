@@ -64,7 +64,7 @@
  }
  
  .jumbotron-music{
-  margin-top: 2.5em;
+  margin-top: 3em;
  }
  
  .jumbotron-user-music{
@@ -103,6 +103,29 @@
  
  .comments{
   margin-top: 2em;
+ }
+ 
+ .comment{
+  margin: 1em 0;
+ }
+ 
+ .comment-user{
+  text-decoration: none;
+  font-weight: bold;
+
+ }
+ 
+ .comment-user:hover{
+  text-decoration: none;
+ }
+ 
+ .comment-date{
+
+ }
+ 
+ .comment-content{
+  font-size: 90%;
+  margin: -.7em 1em .5em 1em;
  }
  
  textarea { resize: none; }

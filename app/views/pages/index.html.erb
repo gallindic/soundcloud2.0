@@ -20,7 +20,7 @@
                     <div class="card-block">
                         <span>Title: <%= link_to @m.title, music_path(@m.id) %><span class="float-right"><%= @m.created_at.strftime("%d-%m-%Y") %></span></span>
                         <p> 
-                            Views: <%= @m.views %> Likes: <%= @m.get_upvotes.size %> Unlikes: <%= @m.get_downvotes.size %>
+                            Likes: <%= @m.get_upvotes.size %> Unlikes: <%= @m.get_downvotes.size %>
                         </p>
                     </div>
                 </div>    

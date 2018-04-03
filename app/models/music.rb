@@ -7,4 +7,6 @@ class Music < ActiveRecord::Base
     mount_uploader :image, FileUploader
     
     acts_as_votable
+    
+    is_impressionable
 end

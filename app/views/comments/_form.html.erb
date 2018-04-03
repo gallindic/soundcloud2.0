@@ -1,8 +1,9 @@
 <%= form_for ([@music, @music.comments.build]) do |f| %>
     <div class="form-group">
-        <%= f.text_area :content, class: "form-control" %>
+        <%= f.text_area :content, class: "form-control", placeholder: "Comment" %>
     </div>
     <div class="form-group">
-        <%= f.submit "Create comment", class: "btn btn-primary" %>
+        <%= f.submit "Add comment", class: "btn btn-primary" %>
     </div>
 <% end %>
+<br/>

@@ -1,13 +1,15 @@
 class MusicsController < ApplicationController
+    
+    impressionist actions: [:show], unique: [:session_hash]
+    
     def show
         @music = Music.find(params[:id])
         
-        v = @music.views += 1
-        @music.update_attribute "views", v
-        
         @user = User.find(@music.user_id)
         
-        @comments = Comment.all.where("user_id = ?", @user.id)
+        @comments = Comment.where(music_id: @music.id).order("created_at DESC")
+        
+        impressionist(@music)
     end
     
     def new
@@ -16,7 +18,6 @@ class MusicsController < ApplicationController
     
     def create
         @music = current_user.musics.build(music_params)
-        @music.views = 0
         
         if @music.save
           redirect_to index_path, :notice => "A new list has been successfully created"  

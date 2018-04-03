@@ -21,7 +21,7 @@
     </div>
 </div>
 <div class="music-info">
-    <button class="btn btn-default" disabled><i class="fa fa-eye" aria-hidden="true"></i> <%= @music.views %></button>
+    <button class="btn btn-default" disabled><i class="fa fa-eye" aria-hidden="true"></i> <%= "#{@music.impressionist_count}" %></button>
     <% if user_signed_in? %>
          <%= link_to like_music_path(@music.id), method: :put do %>
              <button class="btn btn-default"><i class="fa fa-thumbs-up" aria-hidden="true"></i> <%= @music.get_upvotes.size %></button>
@@ -35,11 +35,9 @@
     <% end %>
 </div>
 <div class="comments">
-    <%= render 'comments/form' %>
-    <% for @c in @comments %>
-        <div class="comment box">
-            <p><%= @c.content %></p>
-        </div>
+    <% if user_signed_in? %>
+        <%= render 'comments/form' %>
     <% end %>
+    <%= render 'comments/comments' %>
 </div>
 <br/>
