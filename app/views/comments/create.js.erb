@@ -1,5 +1,8 @@
 /* global $ */
-$("#comment").prepend("<%= j render @comment %>");
+
+//Create.js.erb file je klican, ko pritisnemo gumb od dodaj komentar forma
+//V html element doda komentar
+$("#comment").append("<%= j render @comment %>");
 
 
 

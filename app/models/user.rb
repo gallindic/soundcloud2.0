@@ -3,11 +3,16 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-         
-  has_many :musics, dependent: :destroy
-  has_many :comments, dependent: :destroy
   
+         
+  #dependent - če je starš izbrisan iz baze bodo še otroci
+  has_many :musics, dependent: :destroy #Ima nič ali več komentarjev (otrok)
+  has_many :comments, dependent: :destroy #Ima nič ali več komentarjev (otrok)
+  
+  #Potrebno za carrierwave gem (dodajanje datotek)
   mount_uploader :image, FileUploader
   
-  acts_as_voter
+  #Potrebno za acts_as_votable gem
+  #Pove, da je model user tisti, ki glasuje (dodaja glasove)
+  acts_as_voter  #Ni več v uporabi
 end

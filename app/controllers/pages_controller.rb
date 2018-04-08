@@ -1,10 +1,12 @@
 class PagesController < ApplicationController
+    before_action :find_user
+    
     def index
         
     end
     
     def profile
-        @user = User.find(params[:id])
+        
     end
     
     def settings
@@ -13,5 +15,11 @@ class PagesController < ApplicationController
     def explore
         @music = Music.all
         @genre = Genre.all
+    end
+    
+    private
+    
+    def find_user
+        @user = User.find(params[:id])
     end
 end

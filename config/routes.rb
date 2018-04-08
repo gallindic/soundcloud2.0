@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   #Nardi route za music controller
   resources :musics do
     member do
+      #Naredi dva nova routea, like in pa unlike
       put "like" => "musics#upvote"
       put "unlike" => "musics#downvote"
     end

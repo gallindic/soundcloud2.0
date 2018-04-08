@@ -2,43 +2,59 @@
     <div class="container">
         <div class="jumbotron-content float-left">
             <div class="jumbotron-title">
+                <!--Prikaže naslov in pa ime userja-->
                 <span class="jumbotron-user-music"><%= link_to @user.username, profile_path(@user.id) %> - <%= @music.title %></span>
             </div>
             <div class="jumbotron-music">
+                <!--Avdio player-->
                 <audio src="<%= @music.file.url() %>" type="audio/mpeg" controls class="music-controler">
                     Your browser does not support the audio element.
-                    </audio>            
+                </audio>            
             </div>
         </div>
+        
+        <!--Div v katerem je prikazana slika-->
         <div class="jumbotron-image float-right">
+            <!--Ugotovi, če ima pesem sliko in če jo ima prikaže to sliko-->
+            <!--Če glasba nima slike prikaže default sliko-->
             <% if @music.image.present? %>
                 <%= image_tag @music.image_url.to_s, class: "jumbotron-music-cover" %>
             <% else %>
                 <img src="../music_note.jpg" class="jumbotron-music-cover" />
             <% end %>
         </div>
+        
+        <!--Div, ki uredi document flow po zgornjih floatih-->
         <div class="roww"></div>
     </div>
 </div>
 <div class="music-status">
+    <!--Views button-->
     <button class="btn btn-default" disabled><i class="fa fa-eye" aria-hidden="true"></i> <%= "#{@music.impressionist_count}" %></button>
+    
     <% if user_signed_in? %>
+        <!--Like button-->
          <%= link_to like_music_path(@music.id), method: :put do %>
              <button class="btn btn-default like-btn"><i class="fa fa-thumbs-up" aria-hidden="true"></i> <%= @music.get_upvotes.size %></button>
          <% end %>
+         <!--Unlike-->
          <%= link_to unlike_music_path(@music.id), method: :put do %>
              <button class="btn btn-default unlike-btn"><i class="fa fa-thumbs-down" aria-hidden="true"></i> <%= @music.get_downvotes.size %></button>
          <% end %>
-    <% else %>     
+    <% else %>  
+        <!--Če uporabnik ni prijavljen bosta gumba onemogočena-->
          <button class="btn btn-default" disabled><i class="fa fa-thumbs-up" aria-hidden="true"></i> <%= @music.get_upvotes.size %></i></button>
          <button class="btn btn-default" disabled><i class="fa fa-thumbs-down" aria-hidden="true"></i> <%= @music.get_downvotes.size %></button>
     <% end %>
 </div>
+
 <div id="comment-container">
     <% if user_signed_in? %>
+        <!--Prikaže form za dodajanje komentarjev-->
         <%= render 'comments/form' %>
     <% end %>
     <div id="comment">
+        <!--Prikaže vse komentarje-->
         <%= render @comments %>
     </div>
 </div>
