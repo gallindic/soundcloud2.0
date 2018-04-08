@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180403142837) do
+ActiveRecord::Schema.define(version: 20180403163839) do
 
   create_table "comments", force: :cascade do |t|
     t.text     "content"
@@ -60,12 +60,19 @@ ActiveRecord::Schema.define(version: 20180403142837) do
   create_table "musics", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
     t.string   "file"
     t.integer  "user_id"
     t.string   "image"
     t.integer  "genre_id"
+    t.integer  "cached_votes_total",      default: 0
+    t.integer  "cached_votes_score",      default: 0
+    t.integer  "cached_votes_up",         default: 0
+    t.integer  "cached_votes_down",       default: 0
+    t.integer  "cached_weighted_score",   default: 0
+    t.integer  "cached_weighted_total",   default: 0
+    t.float    "cached_weighted_average", default: 0.0
   end
 
   add_index "musics", ["genre_id"], name: "index_musics_on_genre_id"

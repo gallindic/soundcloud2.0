@@ -12,32 +12,34 @@
         </div>
         <div class="jumbotron-image float-right">
             <% if @music.image.present? %>
-                <%= image_tag @music.image_url.to_s, class: "music-cover" %>
+                <%= image_tag @music.image_url.to_s, class: "jumbotron-music-cover" %>
             <% else %>
-                <img src="../music_note.jpg" class="music-cover" />
+                <img src="../music_note.jpg" class="jumbotron-music-cover" />
             <% end %>
         </div>
         <div class="roww"></div>
     </div>
 </div>
-<div class="music-info">
+<div class="music-status">
     <button class="btn btn-default" disabled><i class="fa fa-eye" aria-hidden="true"></i> <%= "#{@music.impressionist_count}" %></button>
     <% if user_signed_in? %>
          <%= link_to like_music_path(@music.id), method: :put do %>
-             <button class="btn btn-default"><i class="fa fa-thumbs-up" aria-hidden="true"></i> <%= @music.get_upvotes.size %></button>
+             <button class="btn btn-default like-btn"><i class="fa fa-thumbs-up" aria-hidden="true"></i> <%= @music.get_upvotes.size %></button>
          <% end %>
          <%= link_to unlike_music_path(@music.id), method: :put do %>
-             <button class="btn btn-default"><i class="fa fa-thumbs-down" aria-hidden="true"></i> <%= @music.get_downvotes.size %></button>
+             <button class="btn btn-default unlike-btn"><i class="fa fa-thumbs-down" aria-hidden="true"></i> <%= @music.get_downvotes.size %></button>
          <% end %>
     <% else %>     
          <button class="btn btn-default" disabled><i class="fa fa-thumbs-up" aria-hidden="true"></i> <%= @music.get_upvotes.size %></i></button>
          <button class="btn btn-default" disabled><i class="fa fa-thumbs-down" aria-hidden="true"></i> <%= @music.get_downvotes.size %></button>
     <% end %>
 </div>
-<div class="comments">
+<div id="comment-container">
     <% if user_signed_in? %>
         <%= render 'comments/form' %>
     <% end %>
-    <%= render 'comments/comments' %>
+    <div id="comment">
+        <%= render @comments %>
+    </div>
 </div>
 <br/>

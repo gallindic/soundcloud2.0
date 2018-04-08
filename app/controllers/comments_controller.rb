@@ -2,15 +2,26 @@ class CommentsController < ApplicationController
     before_action :find_music
     before_action :find_comment, only: [:destroy, :edit, :update]
 
+
+    def new
+        @comment = Comment.new
+    end
+
     def create
         @comment = @music.comments.create(params[:comment].permit(:content))
         @comment.user_id = current_user.id
         @comment.save
         
-        if @comment.save
-            redirect_to music_path(@music)
-        else
-            render "new"
+        respond_to do |format|
+           if @comment.save
+            format.html { redirect_to music_path(@music), notice: "Comment was successfully made" }
+            format.json { render :_comments, status: :created, location: @comment }
+            format.js {render layout: false}
+           else
+            format.html { render "new" }
+            format.json { render json: @comment.errors, status: :unprocessable__entity }
+            format.js {render layout: false}
+           end
         end
     end
     
