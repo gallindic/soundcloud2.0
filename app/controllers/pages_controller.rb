@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
-    before_action :find_user
+    before_action :find_user, only: [:profile]
+    
     
     def index
         
@@ -22,4 +23,5 @@ class PagesController < ApplicationController
     def find_user
         @user = User.find(params[:id])
     end
+
 end
