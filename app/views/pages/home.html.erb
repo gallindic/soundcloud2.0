@@ -1,0 +1,32 @@
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-2 p-1">
+        </div>
+        <div class="col-8 music-box">
+          <% for @m in @music %>
+            <div class="card box float-left">
+                <div class="card-body">
+                    <div class="float-left music-img">
+                        <% if @m.image.present? %>
+                            <%= image_tag @m.image_url.to_s, class: "music-cover" %>
+                        <% else %>
+                            <img src="music_note.jpg" class="music-cover" />
+                        <% end %>
+                    </div>
+                    <div class="float-right music-info">
+                        <div class="card-block">
+                            <span>Title: <%= link_to @m.title, music_path(@m.id) %><span class="float-right"><%= @m.created_at.strftime("%d-%m-%Y") %></span></span>
+                            <p> 
+                                Likes: <%= @m.get_upvotes.size %> Unlikes: <%= @m.get_downvotes.size %>
+                            </p>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+        <% end %>  
+        </div>
+        <div class="col-2 p-1">
+            
+        </div>
+    </div>
+</div>

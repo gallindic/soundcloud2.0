@@ -1,4 +1,4 @@
-<div class="comment">
+<div id="comment_<%= comment.id %>">
     <p>
         <span class="comment-user"><%= link_to comment.user.username, profile_path(comment.user.id) %></span>&emsp;
         <span class="comment-date"><%= comment.created_at.strftime("%d-%m-%Y") %></span>
@@ -6,8 +6,10 @@
     <p class="comment-content"><%= comment.content %></p>
     <% if user_signed_in? %>
         <% if current_user.id == comment.user.id %>
-            <%= link_to "Delete", music_comment_path(comment.music, comment), method: :delete, data: {confirm: "Are you sure?"} %>
+            <%= link_to "Delete", music_comment_path(comment.music, comment), method: :delete, remote: true, data: {confirm: "Are you sure?"} %>
             <%= link_to "Update", edit_music_comment_path(comment.music, comment) %>
         <% end %>
     <% end %>
 </div>
+
+

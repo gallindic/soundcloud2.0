@@ -1,0 +1,96 @@
+<div id="landing">
+    <div class="landing-box">
+        <h1>Not a member yet?</h1>
+        <button type="button" data-toggle="modal" data-target="#signUpModal" class="btn btn-primary btn-lg">Sign Up</button>
+    </div>
+</div>
+
+
+<div class="modal custom fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+   <div class="modal-dialog" role="document">
+     <div class="modal-content">
+       <div class="modal-header">
+         <h2 class="text-center">Sign Up</h2>
+         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+           &times;       
+         </button>
+       </div>
+       <div class="modal-body">  
+         <%= form_for(:user, :url => session_path(:user)) do |f| %>
+           <div class="field">
+            <%= f.label :username %><br />
+            <%= f.text_field :username, autofocus: true, class: "form-control"  %>
+          </div>
+        
+          <div class="field">
+            <%= f.label :email %><br />
+            <%= f.email_field :email, class: "form-control" %>
+          </div>
+          
+          <div class="field">
+            <%= f.label :image %><br />
+            <%= f.file_field :image, class: "form-control" %>
+          </div>
+        
+          <div class="field">
+            <%= f.label :password %>
+            <% if @minimum_password_length %>
+            <em>(<%= @minimum_password_length %> characters minimum)</em>
+            <% end %><br />
+            <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
+          </div>
+        
+          <div class="field">
+            <%= f.label :password_confirmation %><br />
+            <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
+          </div>
+          <br/>
+          <div class="actions">
+            <%= f.submit "Sign up", class: "btn btn-success" %>
+          </div>
+         <% end %>
+       </div>
+     </div>
+   </div>
+</div>
+
+
+<div class="sections" id="section1">
+    <div class="section-boxes">
+        <div class="section-box">
+            <i class="fa fa-users section-box-icon"></i>
+            <div class="section-box-info">
+                <p>Soundcloud 2.0 offers you a vast variety<br/> of users to interact with.</p>
+            </div>
+        </div>
+        <div class="section-box">
+            <i class="fa fa-headphones section-box-icon"></i>
+            <div class="section-box-info">
+                <p>Start uploading your music<br/> and become famous.</p>
+            </div>
+        </div>
+        <div class="section-box">
+            <i class="fa fa-comments section-box-icon"></i>
+            <div class="section-box-info">
+                <p>Gather comments, likes and views<br/> on your music.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="sections" id="section2">
+    <h1>Popular music</h1>
+    <% for @p in @popularMusic %>
+        <div class="popular-music-box">
+            <div class=popular-music-image"">
+                <% if @p.image.present? %>
+                    <%= image_tag @p.image_url.to_s, class: "music-cover" %>
+                <% else %>
+                    <img src="music_note.jpg" class="music-cover" />
+                <% end %>
+            </div>
+            <div class="popular-music-title">
+                <p><%= @p.title %></p>
+            </div>
+        </div>
+    <% end %>
+</div>
