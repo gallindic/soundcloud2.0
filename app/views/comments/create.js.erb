@@ -1,8 +1,9 @@
 /* global $ */
 
 //Create.js.erb file je klican, ko pritisnemo gumb od dodaj komentar forma
-//V html element doda komentar
-$("#comment").append("<%= j render @comment %>");
+
+$("#comment-field").val("");    //Zbriše vsebino text fielda
+$("#comment").append("<%= j render @comment %>");   //V html element doda komentar
 
 
 

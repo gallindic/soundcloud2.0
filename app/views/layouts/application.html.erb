@@ -9,15 +9,17 @@
 <body>
 
 <!--Ugotovi, če je uporabnik prijavljen in nato prikaže ustrezen navbar-->
-<% if user_signed_in? %>
-  <%= render 'layouts/navUser' %>
-<% else %>
-  <%= render 'layouts/navGuest' %>
-<% end %>
+<header id="main_menu_area">
+  <% if user_signed_in? %>
+    <%= render 'layouts/navUser' %>
+  <% else %>
+    <%= render 'layouts/navGuest' %>
+  <% end %>
+</header>
 
-<div class="container mt-4">
+
   <%= yield %>
-</div>
+
 
 </body>
 </html>

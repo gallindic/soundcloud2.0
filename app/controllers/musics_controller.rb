@@ -1,5 +1,5 @@
 class MusicsController < ApplicationController
-    before_action :find_music, except: [:new]   #Pred vsem najprej izbede to funkcijo
+    before_action :find_music, except: [:new, :create]   #Pred vsem najprej izbede to funkcijo
     before_action :find_music_user, only: [:show] #Ta funkcija je klicana samo za show funkcijo
     #except - Ta funkcija se ne izvede, ko kličemo funkcijo new
     impressionist actions: [:show], unique: [:session_hash] #Treba je met napisano, da gem dela
@@ -23,7 +23,7 @@ class MusicsController < ApplicationController
         
         if @music.save
             #Glasbo shranimo v bazo in smo preusmerjeni na začetno stran
-          redirect_to index_path, :notice => "A new list has been successfully created"  
+          redirect_to explore_path, :notice => "A new list has been successfully created"  
         else
             #V primeru, da se glasba ne shrani v bazo smo preusmerjeni na novo stran
           render "new"
@@ -53,7 +53,7 @@ class MusicsController < ApplicationController
     
     def destroy
         @music.destroy  #Iz baze zbrišemo glasbo in smo preusmerjeni na začetno stran
-        redirect_to index_path, :notice => "Your list has been deleted"
+        redirect_to authenticated_root, :notice => "Your list has been deleted"
     end
     
     private

@@ -1,6 +1,6 @@
 <%= form_for [@music, @music.comments.build], remote: true do |f| %>
     <div class="form-group">
-        <%= f.text_area :content, class: "form-control", placeholder: "Comment" %>
+        <%= f.text_area :content, class: "form-control", placeholder: "Comment", id: "comment-field" %>
     </div>
     <div class="form-group">
         <%= f.submit "Add comment", class: "btn btn-primary" %>

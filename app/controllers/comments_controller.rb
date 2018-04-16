@@ -30,21 +30,35 @@ class CommentsController < ApplicationController
     end
     
     def edit
+        
     end
     
     def update
         #Iz forma dobimo podatke in jih shranimo v comment spremenljivko
-        if @comment.update(params[:comment].permit(:content))
-            redirect_to music_path(@music)  #Če je bilo vse vredu, bomo preusmerjeni na določeno stran
-        else
-            render "new"   #Če je bilo kaj narobe, bomo preusmerjeni na novo stran
+        respond_to do |format|
+          if @comment.update(params[:comment].permit(:content))
+            format.html { redirect_to music_path(@music), notice: 'Post was successfully updated.' }
+            format.json { render :_comments, status: :created, location: @comment }
+            format.js
+          else
+            format.html { render :new }
+            format.json { render json: @comment.errors, status: :unprocessable_entity }
+            format.js
+          end
         end
     end
     
     def destroy
         #Comment spremenljivko dobimo iz find_comment funkcije
-        @comment.destroy    #Izbrišemo komentar
-        redirect_to music_path(@music)  #Presumerjeni smo določeno stran
+        @comment.destroy
+        
+        respond_to do |format|
+          format.html do
+            flash[:success] = 'Comment deleted.'
+            redirect_to music_path(@music)
+          end
+          format.js # JavaScript response
+        end
     end
     
     

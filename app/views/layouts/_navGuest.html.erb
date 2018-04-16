@@ -1,26 +1,95 @@
 <!--Če uporabnik ni prijavljen bo prikazan ta navbar-->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="/index">Soundcloud2.0</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand logo" href="#">Soundcloud 2.0</a>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item ml-2">
-        <a class="nav-link" href="/index">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item ml-2">
-        <a class="nav-link" href="/explore">Explore</a>
-      </li>
-    </ul>
-    <ul class="navbar-nav my-2 my-lg-0">
-      <li class="nav-item ml-2">
-        <%= link_to("Login", new_user_session_path, class: "nav-link") %>
-      </li>
-      <li class="nav-item ml-2">
-        <%= link_to("Register", new_user_registration_path, class: "nav-link") %>
-      </li>
-    </ul>
+      <ul class="navbar-nav mr-auto"></ul>
+      <ul class="navbar-nav my-2 my-lg-0">
+          <li class="nav-item active"><a class="nav-link" href="/index">Home</a></li>
+          <!--class="nav-item"><a class="nav-link" href="/explore">Explore</a></li>-->>
+          <span>
+          <li class="nav-item"><a class="nav-link" href="" data-toggle="modal" data-target="#logInModal">Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="" data-toggle="modal" data-target="#signUpModal">Register</a></li>
+          </span>
+      </ul>
   </div>
 </nav>
+
+<!--Sign Up modal-->
+<div class="modal custom fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+   <div class="modal-dialog" role="document">
+     <div class="modal-content">
+       <div class="modal-header">
+         <h2 class="text-center">Sign Up</h2>
+         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+           &times;       
+         </button>
+       </div>
+       <div class="modal-body">  
+         <%= form_for(:user, :url => session_path(:user)) do |f| %>
+           <div class="field">
+            <%= f.label :username %><br />
+            <%= f.text_field :username, autofocus: true, class: "form-control"  %>
+          </div>
+        
+          <div class="field">
+            <%= f.label :email %><br />
+            <%= f.email_field :email, class: "form-control" %>
+          </div>
+          
+          <div class="field">
+            <%= f.label :image %><br />
+            <%= f.file_field :image, class: "form-control" %>
+          </div>
+        
+          <div class="field">
+            <%= f.label :password %>
+            <% if @minimum_password_length %>
+            <em>(<%= @minimum_password_length %> characters minimum)</em>
+            <% end %><br />
+            <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
+          </div>
+        
+          <div class="field">
+            <%= f.label :password_confirmation %><br />
+            <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
+          </div>
+          <br/>
+          <div class="actions">
+            <%= f.submit "Sign up", class: "btn btn-success" %>
+          </div>
+         <% end %>
+       </div>
+     </div>
+   </div>
+</div>
+
+<!--Log in modal-->
+<div class="modal custom fade" id="logInModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+   <div class="modal-dialog" role="document">
+     <div class="modal-content">
+       <div class="modal-header">
+         <h2 class="text-center">Log In</h2>
+         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+           &times;       
+         </button>
+       </div>
+       <div class="modal-body">  
+         <%= form_for(:user, :url => session_path(:user)) do |f| %>
+           <div class="field">
+            <%= f.label :email %><br />
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+          </div>
+        
+          <div class="field">
+            <%= f.label :password %><br />
+            <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
+          </div>
+          <br/>
+          <div class="actions">
+            <%= f.submit "Log in", class: "btn btn-primary" %>
+          </div>
+         <% end %>
+       </div>
+     </div>
+   </div>
+</div>

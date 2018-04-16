@@ -19,13 +19,22 @@ Rails.application.routes.draw do
   end
   
   #Root page
-  root 'pages#index'
+  authenticated :user do
+    #Če je uporabnik prijavljen je ta page root page
+    root :to => 'pages#home', as: :authenticated_root
+  end
+  root :to => 'pages#index' #Če uporabnik ni prijavljen je ta page root page
   
   #Ustvarjeni routei
   get '/profile/:id' => 'pages#profile', as: :profile
   get '/index' => 'pages#index'
   get '/settings' => 'pages#settings'
   get '/explore' => 'pages#explore'
+<<<<<<< HEAD
+=======
+  get '/home' => 'pages#home'
+
+>>>>>>> 9263b4d5b57c60ff868f94f5516f905c6b06f181
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
