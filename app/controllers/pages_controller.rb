@@ -12,7 +12,7 @@ class PagesController < ApplicationController
     end
     
     def profile
-        
+        @user_music = Music.all
     end
     
     def settings
@@ -30,6 +30,11 @@ class PagesController < ApplicationController
     
     def find_user
         @user = User.find(params[:id])
+        
+    end
+    
+    def show
+        
     end
 
 end

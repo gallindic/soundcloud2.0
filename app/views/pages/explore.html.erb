@@ -1,0 +1,41 @@
+<<<<<<< HEAD
+<h1>Explore</h1>
+<div class="row">
+    <div class="col-3 p-1">
+        <h5 class="mt-2 mb-3 text-center">Genres</h5>
+        <% for @g in @genre %>
+            <p class="genre-box"><%= @g.name %></p>
+        <% end %>
+    </div>
+    <div class="col-6 music-box">
+      <% for @m in @music %>
+        <div class="card box float-left">
+            <div class="card-body">
+                <div class="float-left music-img">
+                    <% if @m.image.present? %>
+                        <%= image_tag @m.image_url.to_s, class: "music-cover" %>
+                    <% else %>
+                        <img src="music_note.jpg" class="music-cover" />
+                    <% end %>
+                </div>
+                <div class="float-right music-info">
+                    <div class="card-block">
+                        <span>Title: <%= link_to @m.title, music_path(@m.id) %><span class="float-right"><%= @m.created_at.strftime("%d-%m-%Y") %></span></span>
+                        <p> 
+                            Likes: <%= @m.get_upvotes.size %> Unlikes: <%= @m.get_downvotes.size %>
+                            
+                        </p>
+                        
+                        <p> <%= link_to "Edit",edit_music_path(@m.id)  %> </p>
+                    </div>
+                </div>    
+            </div>
+        </div>
+    <% end %>  
+    </div>
+    <div class="col-3 p-1">
+        
+    </div>
+</div>
+=======
+>>>>>>> 9263b4d5b57c60ff868f94f5516f905c6b06f181

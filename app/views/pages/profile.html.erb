@@ -1,4 +1,15 @@
-<h1>Profile: <%= @user.username %></h1>
+<h1>Profile</h1> <br> 
+<h3>Ime:<%= @user.username %></h3>
 <% if @user.admin == true %>
     <p>ADMIN</p>
 <% end %>
+
+Profile Image: <p> <%= @user.image%> </p>
+<br>
+Email: <p> <%= @user.email%> </p>
+
+
+<% @user_music.each do |music| %> 
+    <%= link_to music.title, music_path(music) %> <br>
+<% end %>
+
