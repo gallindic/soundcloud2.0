@@ -22,7 +22,10 @@
                         <span>Title: <%= link_to @m.title, music_path(@m.id) %><span class="float-right"><%= @m.created_at.strftime("%d-%m-%Y") %></span></span>
                         <p> 
                             Likes: <%= @m.get_upvotes.size %> Unlikes: <%= @m.get_downvotes.size %>
+                            
                         </p>
+                        
+                        <p> <%= link_to "Edit",edit_music_path(@m.id)  %> </p>
                     </div>
                 </div>    
             </div>

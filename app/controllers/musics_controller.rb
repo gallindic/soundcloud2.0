@@ -31,6 +31,7 @@ class MusicsController < ApplicationController
     end
     
     def edit
+        @music = Music.find(params[:id])
     end
     
     def update

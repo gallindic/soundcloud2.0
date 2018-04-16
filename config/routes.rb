@@ -26,7 +26,6 @@ Rails.application.routes.draw do
   get '/index' => 'pages#index'
   get '/settings' => 'pages#settings'
   get '/explore' => 'pages#explore'
-
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
