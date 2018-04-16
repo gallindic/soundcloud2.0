@@ -1,15 +1,94 @@
-<h1>Profile</h1> <br> 
-<h3>Ime:<%= @user.username %></h3>
-<% if @user.admin == true %>
-    <p>ADMIN</p>
-<% end %>
 
-Profile Image: <p> <%= @user.image%> </p>
-<br>
-Email: <p> <%= @user.email%> </p>
-
-
-<% @user_music.each do |music| %> 
-    <%= link_to music.title, music_path(music) %> <br>
-<% end %>
-
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-3">
+            <div class="profile-card profile-box">
+              <div class="profile-image">
+                  <%= image_tag @user.image_url.to_s %>
+              </div>
+              <h1><%= @user.username %></h1>
+              <p class="title">
+                  <% if @user.admin %>
+                      Admin
+                  <% else %>
+                      User
+                  <% end %>
+              </p>
+              <p><%= @user.email %></p>
+            </div>
+        </div>
+        <div class="col-9">
+           <div class="profile-box profile-content">
+               <div class="user-posts">
+                   <h3>Your Music (<%= @numUserPost %>)</h3>
+                   <div class="user-musics">
+                       <table class="table">
+                           <thead>
+                               <tr>
+                                   <th scope="col">Title</th>
+                                   <th scope="col">Likes</th>
+                                   <th scope="col">Num of Comments</th>
+                                   <th></th>
+                                   <th></th>
+                               </tr>
+                           </thead>
+                           <tbody>
+                                <% for @m in @user_music %>
+                                   <tr>
+                                      <td><%= link_to @m.title, music_path(@m.id) %></td>
+                                      <td><%= @m.cached_votes_up %></td>
+                                      <td><%= Comment.where("music_id = ?", @m.id).count %></td>
+                                      <% if @user == current_user %>
+                                          <td><%= link_to "Delete", music_path(@m.id), method: :delete, data: {confirm: "Are you sure?"} %></td>
+                                          <td><%= link_to "Update", edit_music_path(@m.id) %></td>
+                                      <% end %>
+                                    </tr>
+                               <% end %>       
+                           </tbody>
+                       </table>
+                       
+                   </div>
+               </div>
+           </div>
+           <% if @user.admin %>
+               <div class="profile-box admin-content mt-4">
+                   <div class="admin-users">
+                       <h3>Users</h3>
+                       <div class="admin-users-table">
+                           <table class="table">
+                               <thead>
+                                   <tr>
+                                       <th scope="col">Username</th>
+                                       <th scope="col">Email</th>
+                                       <th scope="col">Status</th>
+                                       <th scope="col">Number of Posts</th>
+                                       <th></th>
+                                       <th></th>
+                                   </tr>
+                               </thead>
+                               <tbody>
+                                    <% for @u in @users %>
+                                       <tr>
+                                          <td><%= link_to @u.username, profile_path(@u.id) %></td>
+                                          <td><%= @u.email %></td>
+                                          <td>
+                                              <% if @u.admin %>
+                                                  Admin
+                                              <% else %>
+                                                  User
+                                              <% end %>
+                                          </td>
+                                          <td><%= Music.where("user_id = ?", @u.id).count %></td>
+                                          <td><%= link_to "Delete" %></td>
+                                        </tr>
+                                   <% end %>       
+                               </tbody>
+                           </table>
+                           
+                       </div>
+                   </div>
+               </div>  
+            <% end %>
+        </div>
+    </div>
+</div>
