@@ -20,5 +20,7 @@ class ApplicationController < ActionController::Base
   
   def application
     @allMusics = Music.all.count
+    @userMusic = Music.where("user_id = ?", current_user.id).count
+    @userMusic = "Profile(" + @userMusic.to_s + ")"
   end
 end
