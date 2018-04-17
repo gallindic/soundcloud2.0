@@ -3,6 +3,7 @@ class MusicsController < ApplicationController
     before_action :find_music_user, only: [:show, :destroy] #Ta funkcija je klicana samo za show funkcijo
     #except - Ta funkcija se ne izvede, ko kličemo funkcijo new
     impressionist actions: [:show], unique: [:session_hash] #Treba je met napisano, da gem dela
+    before_action :music_params, only: [:update]
     
     def show
         #Poiščemo vse komentarje, ki pripadajo glasbi in jih razvrstimo po naraščujočem vrstnem redu
@@ -35,6 +36,14 @@ class MusicsController < ApplicationController
     end
     
     def update
+        @music = Music.find(params[:id])
+        
+        if @music.update(music_params)
+            redirect_to music_path, :notice => "Your music post is now updated"
+        else
+            render "edit"
+        end
+        
     end
     
     #Funkcija, ki se uporablja za glasovanje
@@ -74,4 +83,4 @@ class MusicsController < ApplicationController
     def music_params
         params.require(:music).permit(:title, :description, :file, :image, :genre_id)
     end
-end
+    end

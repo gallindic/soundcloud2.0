@@ -1,0 +1,34 @@
+<div class="container mt-4">
+  <h1>Edit a music file</h1>
+  
+  <%= form_for @music do |m| %>
+  
+    <div class="form-group">
+      <%= m.label :title %><br />
+      <%= m.text_field :title, autofocus: true, class: 'form-control' %>
+    </div>
+    
+    <div class="form-group">
+      <%= m.label :description %><br />
+      <%= m.text_field :description, class: 'form-control' %>
+    </div>
+  
+    <p>Music file:</p>
+    <div class="form-group">
+      <%= m.file_field :file, class: "form-control" %>
+    </div>
+    
+    <p>Image:</p>
+    <div class="form-group">
+      <%= m.file_field :image, class: "form-control" %>
+    </div>
+    
+    <div class="form-group">
+      <%= m.collection_select :genre_id, Genre.order(:name), :id, :name, class: "form-control" %>
+    </div>
+  
+    <div class="form-group">
+      <%= m.submit "Edit", class: 'btn btn-primary', data: { disable_with: 'Uploading' } %>
+    </div>
+  <% end %>
+</div>

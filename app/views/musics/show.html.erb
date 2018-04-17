@@ -47,6 +47,14 @@
              <button class="btn btn-default" disabled><i class="fa fa-thumbs-up" aria-hidden="true"></i> <%= @music.get_upvotes.size %></i></button>
              <button class="btn btn-default" disabled><i class="fa fa-thumbs-down" aria-hidden="true"></i> <%= @music.get_downvotes.size %></button>
         <% end %>
+        
+        <% if current_user.id == @music.user.id %>
+        
+        <p> <%= link_to "Edit", edit_music_path(@music) %> </p>
+        
+        
+        <% end %>
+        
     </div>
     
     <div id="comment-container">
