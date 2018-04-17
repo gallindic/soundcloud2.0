@@ -18,6 +18,8 @@ Rails.application.routes.draw do
     resources :comments
   end
   
+  resources :users
+  
   #Root page
   authenticated :user do
     #Če je uporabnik prijavljen je ta page root page
@@ -31,6 +33,11 @@ Rails.application.routes.draw do
   get '/settings' => 'pages#settings'
   get '/explore' => 'pages#explore'
   get '/home' => 'pages#home'
+<<<<<<< HEAD
+=======
+  
+  
+>>>>>>> c2350517f92abf10579ef3efff1721b1d34178c7
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
