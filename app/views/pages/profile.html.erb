@@ -6,7 +6,13 @@
               <div class="profile-image">
                   <%= image_tag @user.image_url.to_s %>
               </div>
-              <h1><%= @user.username %></h1>
+              <h1>
+                  <% if current_user.name.present? %>
+                    <%= current_user.name %>
+                  <% else %>
+                    <%= current_user.username %>
+                  <% end %>
+              </h1>
               <p class="title">
                   <% if @user.admin %>
                       Admin

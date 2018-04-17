@@ -33,6 +33,12 @@ Rails.application.routes.draw do
   get '/settings' => 'pages#settings'
   get '/explore' => 'pages#explore'
   get '/home' => 'pages#home'
+<<<<<<< HEAD
+=======
+  
+  
+  
+>>>>>>> 1f1f2e5a9ef58a506222f42099684b180a7de2bc
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
