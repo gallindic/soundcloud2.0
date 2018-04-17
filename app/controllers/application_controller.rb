@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
   
   # call the configured params 
   before_action :configure_permitted_parameters, if: :devise_controller?
+  before_action :application
   
   
   # protect the database, while allowing these fields to be updated.
@@ -14,5 +15,10 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_up) { |u| u.permit(:username, :email, :image, :password, :password_confirmation, :remember_me) }
     devise_parameter_sanitizer.permit(:sign_in) { |u| u.permit(:login, :username, :email, :image, :password, :remember_me) }
     devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(:username, :email, :image, :password, :password_confirmation, :current_password) }
+  end
+  
+  
+  def application
+    @allMusics = Music.all.count
   end
 end
