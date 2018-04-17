@@ -2,10 +2,12 @@ class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
+
+ 
   
   # call the configured params 
   before_action :configure_permitted_parameters, if: :devise_controller?
-  
+  before_action :application  
   
   # protect the database, while allowing these fields to be updated.
   protected 
@@ -14,5 +16,12 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_up) { |u| u.permit(:username, :email, :image, :password, :password_confirmation, :remember_me) }
     devise_parameter_sanitizer.permit(:sign_in) { |u| u.permit(:login, :username, :email, :image, :password, :remember_me) }
     devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(:username, :email, :image, :password, :password_confirmation, :current_password) }
+  end
+  
+  def application
+  @allMusics = Music.all.count
+  @userMusic = Music.where("user_id = ?", current_user.id).count
+  @userMusic = "Profile(" + @userMusic.to_s + ")"
+  
   end
 end
