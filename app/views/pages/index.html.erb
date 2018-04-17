@@ -16,7 +16,7 @@
          </button>
        </div>
        <div class="modal-body">  
-         <%= form_for(:user, url: registration_path(:user)) do |f| %>
+         <%= form_for(:user, :url => registration_path(:user)) do |f| %>
            <div class="field">
             <%= f.label :username %><br />
             <%= f.text_field :username, autofocus: true, class: "form-control"  %>
@@ -79,18 +79,22 @@
 </div>
 <div class="sections" id="section2">
     <h1>Popular music</h1>
-    <% for @p in @popularMusic %>
-        <div class="popular-music-box">
-            <div class=popular-music-image"">
-                <% if @p.image.present? %>
-                    <%= image_tag @p.image_url.to_s, class: "music-cover" %>
-                <% else %>
-                    <img src="music_note.jpg" class="music-cover" />
-                <% end %>
+    <div class="row">
+        <div class="col-1"></div>
+        <% for @p in @popularMusic %>
+            <div class="col-2 popular-music-box">
+                <div class=popular-music-image"">
+                    <% if @p.image.present? %>
+                        <%= image_tag @p.image_url.to_s, class: "music-cover" %>
+                    <% else %>
+                        <img src="music_note.jpg" class="music-cover" />
+                    <% end %>
+                </div>
+                <div class="popular-music-title">
+                    <p><%= @p.title %></p>
+                </div>
             </div>
-            <div class="popular-music-title">
-                <p><%= @p.title %></p>
-            </div>
-        </div>
-    <% end %>
+        <% end %>
+        <div class="col-1"></div>
+    </div>
 </div>
